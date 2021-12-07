@@ -18,7 +18,7 @@ Adams Family PgDip Assignment 2021-2022
 
 ## Preamble
 
-This is the online repository for the <<Team Name>>. Summary of project requirements should go here.
+This is the online repository for the Adams Family Accommodation. Summary of project requirements should go here.
 
 
 Our product will be delivered using an Agile methodology that embraces the DevOps culture. Please note that our culture embraces change and these documents are treated as living, breathing artefacts that will be continuously updated.
@@ -30,15 +30,23 @@ Our product will be delivered using an Agile methodology that embraces the DevOp
 <>
 
 ### Team Members
-<<List each team member on a separate line>>
+Ciarán Ó hÓgáin
+James Bowman
+Jeffrey Aitken
+John Finegan
+Kay O Callaghan
+Kieran Kelleher
+Luis Uriel Cabrera Gonzalez
+Lydia Shadwell
 
-Lecturer: <<>>
+Lecturer: Paul Greaney
 
-  
+
+
 ### Project Deadline
 <<date and time>>
 Refer to Blackboard for the most up to date information on deadlines.
-  
+
 ## Project Specification  
 <!-- <team must agree specifications here - below are samples for discussion purposes>     -->
     Clean and simple design
@@ -49,16 +57,16 @@ Refer to Blackboard for the most up to date information on deadlines.
     Frameworks
     Database
     Database persistence technology
-    Define the buisness Requirements
+    Define the business Requirements
     Named queries and database triggers for security
     Regex for cleansing and validation of data before sending to the database.
 
 ## Useful Links
 
     DC Slack: <<add link to the slack channel here>>
-    Jira: 
-    GitHub: 
-    Project close out presentation: 
+    Jira:
+    GitHub: https://github.com/devopslecturer/afpgdip2022.git
+    Project close out presentation:
 
 ### More Information
 For more information visit our other sections
@@ -123,7 +131,7 @@ These are the current Risks on the project, re-aligned on a weekly basis
     The order that people present their sprint retro updates will be based on alphabetical order of those present at the meeting.
     Points raised in the sprint retro will be noted and posted on the slack channel by the Scrum Master.
     Backlog refinement?
-    Task estimation will be done using <<what method>>. 
+    Task estimation will be done using <<what method>>.
     Come prepared to meetings.
     Be on time for Stand Ups and meetings.
     Mobile phones on silent.
