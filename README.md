@@ -44,8 +44,7 @@ Lecturer: Paul Greaney
 
 
 ### Project Deadline
-<<date and time>>
-Refer to Blackboard for the most up to date information on deadlines.
+Friday April 1st - 23:59
 
 ## Project Specification  
 <!-- <team must agree specifications here - below are samples for discussion purposes>     -->
