@@ -24,10 +24,10 @@ This is the online repository for the Adams Family Accommodation. Summary of pro
 Our product will be delivered using an Agile methodology that embraces the DevOps culture. Please note that our culture embraces change and these documents are treated as living, breathing artefacts that will be continuously updated.
 
 ### Scrum Master
-<>
+Rotates Weekly
 
 ### Product Owner
-<>
+Rotates Weekly
 
 ### Team Members
 Ciarán Ó hÓgáin
@@ -122,7 +122,7 @@ These are the current Risks on the project, re-aligned on a weekly basis
 
 ### Meetings
 
-    Stand-ups will occur on <<Day(s) and time>>.
+    Stand-ups will occur on Tuesdays at 20:15 and Thursday at 18:45.
     The order that people give their updates will be based on <<define the order>> of those present at the meeting.
     Updates will be in the form: What I've done, What I plan to do, Impediments
     Sprint planning will occur every other <<day and time>>.
