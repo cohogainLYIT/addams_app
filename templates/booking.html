@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Welcome to the Addams Family Accomodation</title>
+		<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+	</head>
+	<body>
+		<div class="login">
+			<h1>Reservations</h1>
+			<form action="{{ url_for('book') }}" method="post">
+				<label for="reservation_name">
+					<i class="fas fa-user"></i>
+				</label>
+				<input type="text" name="reservation_name" placeholder="Your Name" id="reservation_name" required>
+				<label for="guests">
+					<i class="fas fa-users"></i>
+				</label>
+				<input type="text" name="guests" placeholder="Number of Guests" id="guests" required>
+				<label for="reservation_date">
+					<i class="fas fa-calendar-week"></i>
+				</label>
+				<input type="date" name="reservation_date" placeholder="Booking Date" id="reservation_date" required>
+				<div class="msg">{{ msg }}</div>
+				<input type="submit" value="book">
+			</form>
+		</div>
+	</body>
+</html>
