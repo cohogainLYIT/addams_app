@@ -1,0 +1,77 @@
+
+variables:
+  - group: dev-variable-group 
+
+trigger:
+  batch: true
+  branches:
+    include:
+      - develop
+
+pool:
+  name: 'Default'
+
+stages:
+
+  - stage: Dev
+    jobs:
+    - job: Dev_Deploy
+      steps:
+        - checkout: self
+
+        - task: Bash@3
+          inputs:
+            targetType: 'inline'
+            script: |
+              set -e
+              echo "Dev Deploy"
+              pwd
+              ls -la
+              #ufw status
+          env:
+             ARM_SSH_KEY: $(de-vm-ssh-key)
+             ARM_vmuser: $(dev-user)
+             ARM_vmpasswd: $(dev-vm-passwd)
+             ARM_vmip: $(dev-vm-ip)
+
+  - stage: Dev_Unit_Tests
+    jobs:
+    - job: Dev_Test
+      steps:
+        - checkout: self
+
+        - task: Bash@3
+          inputs:
+            targetType: 'inline'
+            script: |
+              set -e
+              echo "Dev Test"
+              netstat -pnltu
+              #curl -v http:// 13.74.152.222:5000
+
+  - stage: Prod
+    jobs:
+    - job: Prod_Deploy
+      steps:
+        - checkout: self
+
+        - task: Bash@3
+          inputs:
+            targetType: 'inline'
+            script: |
+              set -e
+              echo "Prod Deploy"
+
+  - stage: Prod_Unit_Test
+    jobs:
+    - job: Prod_Test
+      steps:
+        - checkout: self
+
+        - task: Bash@3
+          inputs:
+            targetType: 'inline'
+            script: |
+              set -e
+              echo "Prod Test"       
+
