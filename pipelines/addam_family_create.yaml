@@ -28,6 +28,8 @@ stages:
               pwd
               ls -la
               #ufw status
+            workingDirectory: "$(System.DefaultWorkingDirectory)"
+          displayName: "Copy Dev Website files"
           env:
              ARM_SSH_KEY: $(de-vm-ssh-key)
              ARM_vmuser: $(dev-user)
@@ -48,6 +50,8 @@ stages:
               echo "Dev Test"
               netstat -pnltu
               #curl -v http:// 13.74.152.222:5000
+            workingDirectory: "$(System.DefaultWorkingDirectory)"
+          displayName: "Perform Dev Unit Tests"
 
   - stage: Prod_Deploy
     dependsOn: [Dev_Unit_Tests]
@@ -69,6 +73,11 @@ stages:
                   script: |
                     set -e
                     echo "Prod Deploy"
+<<<<<<< HEAD
+                  workingDirectory: "$(System.DefaultWorkingDirectory)"
+                displayName: "Copy Prod Website files"
+=======
+>>>>>>> main
 
   - stage: Prod_Unit_Test
     jobs:
@@ -81,5 +90,7 @@ stages:
             targetType: 'inline'
             script: |
               set -e
-              echo "Prod Test"       
+              echo "Prod Test"
+            workingDirectory: "$(System.DefaultWorkingDirectory)"
+          displayName: "Perform Prod Unit tests"  
 
