@@ -1,4 +1,3 @@
-- task: SonarCloudPrepare@1
   inputs:
     SonarCloud: 'SonarCloud'
     organization: 'addamsfamily'
@@ -44,6 +43,16 @@ stages:
              ARM_vmuser: $(dev-user)
              ARM_vmpasswd: $(dev-vm-passwd)
              ARM_vmip: $(dev-vm-ip)
+        - task: SonarCloudPrepare@1
+          inputs:
+            SonarCloud: 'SonarCloud'
+            organization: 'addamsfamily'
+            scannerMode: 'CLI'
+            configMode: 'manual'
+            cliProjectKey: 'AddamsFamily_AddamsFamily2022'
+            cliProjectName: 'AddamsFamily2022'
+            cliSources: '.'
+
 
   - stage: Dev_Unit_Tests
     jobs:
