@@ -1,4 +1,12 @@
-
+- task: SonarCloudPrepare@1
+  inputs:
+    SonarCloud: 'SonarCloud'
+    organization: 'addamsfamily'
+    scannerMode: 'CLI'
+    configMode: 'manual'
+    cliProjectKey: 'AddamsFamily_AddamsFamily2022'
+    cliProjectName: 'AddamsFamily2022'
+    cliSources: '.'
 variables:
   - group: dev-variable-group
   - group: prod-variable-group
