@@ -62,6 +62,9 @@ stages:
               #curl -v http:// 13.74.152.222:5000
             workingDirectory: "$(System.DefaultWorkingDirectory)"
           displayName: "Perform Dev Unit Tests"
+        - task: SonarCloudAnalyze@1
+
+
 
   - stage: Prod_Deploy
     dependsOn: [Dev_Unit_Tests]
