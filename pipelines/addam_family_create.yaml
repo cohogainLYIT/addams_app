@@ -44,7 +44,10 @@ stages:
             cliProjectKey: 'AddamsFamily_AddamsFamily2022'
             cliProjectName: 'AddamsFamily2022'
             cliSources: '.'
-
+        - task: SonarCloudAnalyze@1
+        - task: SonarCloudPublish@1
+          inputs:
+            pollingTimeoutSec: '300'
 
   - stage: Dev_Unit_Tests
     jobs:
@@ -62,7 +65,7 @@ stages:
               #curl -v http:// 13.74.152.222:5000
             workingDirectory: "$(System.DefaultWorkingDirectory)"
           displayName: "Perform Dev Unit Tests"
-        - task: SonarCloudAnalyze@1
+
 
 
 
