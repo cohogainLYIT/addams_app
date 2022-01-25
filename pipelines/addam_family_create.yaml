@@ -12,8 +12,7 @@ pool:
   name: 'Default'
 
 stages:
-
-  - stage: Dev
+  - stage: Dev_Deploy
     jobs:
     - job: Dev_Deploy
       steps:
@@ -25,6 +24,7 @@ stages:
             script: |
               set -e
               echo "Dev Deploy"
+              whoami
               pwd
               ls -la
               #ufw status
@@ -49,18 +49,26 @@ stages:
               netstat -pnltu
               #curl -v http:// 13.74.152.222:5000
 
-  - stage: Prod
+  - stage: Prod_Deploy
+    dependsOn: [Dev_Unit_Tests]
+    condition: succeeded('Dev_Unit_Tests')
     jobs:
-    - job: Prod_Deploy
-      steps:
-        - checkout: self
+    - deployment: Prod_Deploy
+      continueOnError: false
+      environment: Dev
+      timeoutInMinutes: 5
+      strategy:
+        runOnce:
+          deploy:
+            steps:
+              - checkout: none
 
-        - task: Bash@3
-          inputs:
-            targetType: 'inline'
-            script: |
-              set -e
-              echo "Prod Deploy"
+              - task: Bash@3
+                inputs:
+                  targetType: 'inline'
+                  script: |
+                    set -e
+                    echo "Prod Deploy"
 
   - stage: Prod_Unit_Test
     jobs:
