@@ -1,6 +1,7 @@
 
 variables:
-  - group: dev-variable-group 
+  - group: dev-variable-group
+  - group: prod-variable-group
 
 trigger:
   batch: true
@@ -73,11 +74,8 @@ stages:
                   script: |
                     set -e
                     echo "Prod Deploy"
-<<<<<<< HEAD
                   workingDirectory: "$(System.DefaultWorkingDirectory)"
                 displayName: "Copy Prod Website files"
-=======
->>>>>>> main
 
   - stage: Prod_Unit_Test
     jobs:
