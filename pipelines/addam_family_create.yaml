@@ -43,19 +43,19 @@ stages:
         #     script: pytest -v
         #   displayName: "Perform Pre Deploy Unit Tests"
 
-        # - task: SonarCloudPrepare@1
-        #   inputs:
-        #     SonarCloud: 'SonarCloud'
-        #     organization: 'addamsfamily'
-        #     scannerMode: 'CLI'
-        #     configMode: 'manual'
-        #     cliProjectKey: 'AddamsFamily_AddamsFamily2022'
-        #     cliProjectName: 'AddamsFamily2022'
-        #     cliSources: '.'
-        # - task: SonarCloudAnalyze@1
-        # - task: SonarCloudPublish@1
-        #   inputs:
-        #     pollingTimeoutSec: '300'
+        - task: SonarCloudPrepare@1
+          inputs:
+            SonarCloud: 'SonarCloud'
+            organization: 'addamsfamily'
+            scannerMode: 'CLI'
+            configMode: 'manual'
+            cliProjectKey: 'AddamsFamily_AddamsFamily2022'
+            cliProjectName: 'AddamsFamily2022'
+            cliSources: '.'
+        - task: SonarCloudAnalyze@1
+        - task: SonarCloudPublish@1
+          inputs:
+            pollingTimeoutSec: '300'
 
   - stage: Dev_Unit_Tests
     jobs:
@@ -73,9 +73,6 @@ stages:
               #curl -v http:// 13.74.152.222:5000
             workingDirectory: "$(System.DefaultWorkingDirectory)"
           displayName: "Perform Dev Unit Tests"
-
-
-
 
   - stage: Prod_Deploy
     dependsOn: [Dev_Unit_Tests]
