@@ -36,12 +36,12 @@ stages:
              ARM_vmpasswd: $(dev-vm-passwd)
              ARM_vmip: $(dev-vm-ip)
 
-        # Runs unit tests, project doesnt need to be deployed in order to run
-        - task: Bash@3
-          inputs:
-            targetType: 'inline'
-            script: pytest -v
-          displayName: "Perform Pre Deploy Unit Tests"
+        # # Runs unit tests, project doesnt need to be deployed in order to run
+        # - task: Bash@3
+        #   inputs:
+        #     targetType: 'inline'
+        #     script: pytest -v
+        #   displayName: "Perform Pre Deploy Unit Tests"
 
         - task: SonarCloudPrepare@1
           inputs:
@@ -73,9 +73,6 @@ stages:
               #curl -v http:// 13.74.152.222:5000
             workingDirectory: "$(System.DefaultWorkingDirectory)"
           displayName: "Perform Dev Unit Tests"
-
-
-
 
   - stage: Prod_Deploy
     dependsOn: [Dev_Unit_Tests]
