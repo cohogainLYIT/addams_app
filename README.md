@@ -81,11 +81,8 @@ Friday April 1st - 23:59
 ## Useful Links
 
 [Project Slack Channel](https://app.slack.com/client/T84LE6L6R/C02P6U2S7RV)  
-
 [Azure DevOps Ticketing](https://dev.azure.com/AddamsFamily/AddamsFamily2022/_backlogs/backlog/AddamsFamily2022%20Team/Stories/?showParents=true)   
-
 [Azure Git Repository](https://dev.azure.com/AddamsFamily/AddamsFamily2022/_git/AddamsFamily2022?version=GBmain)  
- 
 Project close out presentation: TBC 
 
 ### More Information
