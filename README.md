@@ -1,7 +1,10 @@
 # AFPGDIP2022
-Letterkenny Institute of Technology - Postgraduate Diploma in DevOps 2021-2022
-DevOps Project Management
-Addams Family Accommodation Team Assignment 
+Letterkenny Institute of Technology - Postgraduate Diploma in DevOps 2021-2022  
+
+DevOps Project Management  
+
+Addams Family Accommodation Team Assignment  
+ 
 
 
 ## Table of Contents
@@ -21,13 +24,26 @@ Addams Family Accommodation Team Assignment
 
 ## Preamble
 
-This is the online repository for the Adams Family Accommodation. Summary of project requirements should go here.
+This is the online repository for the Addams Family Accommodation Project.
 
+- The end customer would like an online booking system for a range of hotels and holiday homes. 
+- Their most popular product is Haunted Houses. 
+- The system must take details from a customer and map them to the room/suites/houses available along with a single box for extra ‘nice to have’ requests. 
+- The system should be clean and simple. 
+- Your team has been tasked with creating the pipeline for the SDLC. 
+- You have also been asked to provide a simple prototype page(s) to test the pipeline. 
+- The system needs to take into account the usual security requirements. 
+- The administrator of the end system (Adams family member) should be able to access detailed information and edit as appropriate. 
+- Once the client enters details it should not be able to be changed by the holiday maker.
 
 Our product will be delivered using an Agile methodology that embraces the DevOps culture. Please note that our culture embraces change and these documents are treated as living, breathing artefacts that will be continuously updated.
 
 ### Scrum Master
 Rotates Weekly
+- Sprint 1, Week 1 : Jeff Aitken
+- Sprint 1, Week 2 : Lydia Shadwell
+- Sprint 1, Week 3 : Ciarán Ó hÓgáin
+- Sprint 2, Week 1 : James Bowman (current)
 
 ### Product Owner
 Rotates Weekly
@@ -45,11 +61,13 @@ Rotates Weekly
 Lecturer: Paul Greaney
 
 
-
 ### Project Deadline
 Friday April 1st - 23:59
 
 ## Project Specification  
+- A clean and simple website, based on the Python Flask framework.  
+ 
+- An Azure DevOps pipline
 <!-- <team must agree specifications here - below are samples for discussion purposes>     -->
     Clean and simple design
     User access levels (client, administrator)
