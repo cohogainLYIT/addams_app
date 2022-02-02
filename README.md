@@ -13,7 +13,7 @@ Addams Family Accommodation Team Assignment
         Project Deadline
         Project Specification
         Considerations
-        [Useful Links](# Useful Links)
+[Useful Links](# Useful Links)
             For more information visit our other sections
         Risk Register
         Tenants of Design
