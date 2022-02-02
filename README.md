@@ -100,27 +100,27 @@ TO BE UPDATED - These are the current Risks on the project, re-aligned on a week
 
 ## Tenants of Design
 TO BE COMPLETED 
-> <pick from the sample sections below and add your own>  
-> Dedication to clean, secure, performant and self documented code  
->       code Frameworks used  
->       code coverage tool used  
->       Secure code: Regex for cleansing and validation, Named queries and database triggers  
->       performance testing tool to be used  
->   Documentation / code commenting (javadoc)/separate branch  
->   Datastore for persistance  
->   Testing: 
->       Unit testing  
->       integretation testing  
->       UA  
->   Environments:  
->       staging and production  
->       tight configuration management for consistency and reproducibility  
->       automated creation and deployments  
->       integrated and automated pipeline (commit -> test -> deploy)  
->   Github version control:  
->       branches used  
->       version/release management  
->   Agile project management methods/principles (jira)  
+<pick from the sample sections below and add your own>  
+1. Dedication to clean, secure, performant and self documented code  
+    - code Frameworks used  
+    - code coverage tool used  
+    - Secure code: Regex for cleansing and validation, Named queries and database triggers  
+    - performance testing tool to be used  
+2. Documentation / code commenting (javadoc)/separate branch  
+3. Datastore for persistance  
+4. Testing: 
+    - Unit testing  
+    - integretation testing  
+    - UA  
+5. Environments:  
+    - staging and production  
+    - tight configuration management for consistency and reproducibility  
+    - automated creation and deployments  
+    - integrated and automated pipeline (commit -> test -> deploy)  
+6. Github version control:  
+    - branches used  
+    - version/release management  
+7. Agile project management methods/principles (jira)  
 
 ## Social Contract
 
