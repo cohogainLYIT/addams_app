@@ -13,7 +13,7 @@ Addams Family Accommodation Team Assignment
 [Project Deadline](#project-deadline)  
 [Project Specification](#project-specification)  
 [Considerations](#considerations)  
-[Useful Links](#useful-links)
+[Useful Links](#useful-links)  
 [Risk Register](#risk-register)  
 [Tenants of Design](#tenants-of-design)  
 [Social Contract](#social-contract)  
@@ -62,20 +62,20 @@ Friday April 1st - 23:59
 
 ## Project Specification  
 <!-- <Our team agreed specifications are as follows>     -->
-    A clean and simple website design.
-    Two user access levels - Customer and Administrator.
+    - A clean and simple website design.
+    - Two user access levels - Customer and Administrator.
 
-    Azure DevOps will be used to implement the pipeline.
-    The site will use the Python Flask Framework.
-    The site will be hosted on an Azure Virtual Machine with a MySQL Database.  
+    - Azure DevOps will be used to implement the pipeline.
+    - The site will use the Python Flask Framework.
+    - The site will be hosted on an Azure Virtual Machine with a MySQL Database.  
 
-    Azure Application Insights will be used for performance testing.
-    Azure DevOps will be used for source control management.
-    Azure DevOps be used for ticketing and sprint planning.
-    Azure DevOps Artifacts will be used as binary repository.
-    Postman / Newman will be used to perform unit testing.
-    Sphinx will be used for Automatic Documentation.  
-    SonarCloud will be used for security and code quality testing.
+    - Azure Application Insights will be used for performance testing.
+    - Azure DevOps will be used for source control management.
+    - Azure DevOps be used for ticketing and sprint planning.
+    - Azure DevOps Artifacts will be used as binary repository.
+    - Postman / Newman will be used to perform unit testing.
+    - Sphinx will be used for Automatic Documentation.  
+    - SonarCloud will be used for security and code quality testing.
     
 
 ##Useful Links
