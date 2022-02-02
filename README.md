@@ -88,15 +88,15 @@ Project close out presentation: TBC
 
 ## Risk Register
 
-These are the current Risks on the project, re-aligned on a weekly basis
+TO BE UPDATED - These are the current Risks on the project, re-aligned on a weekly basis
 
-    Infrastructure proving to be a real problem, may block being able to release software
-    Team is finding itself to be running short on time due to other work and study commitments
-    No PO feedback on software
-    Unknown technology choices has led to a lot of upskilling required
-    Changing / ambiguous requirements
-    Talk of the company being bought out has raised concerns
-    Lack of rights for toolsets chosen has hindered progress and ability to deliver
+    1. Infrastructure proving to be a real problem, may block being able to release software
+    2. Team is finding itself to be running short on time due to other work and study commitments
+    3. No PO feedback on software
+    4. Unknown technology choices has led to a lot of upskilling required
+    5. Changing / ambiguous requirements
+    6. Talk of the company being bought out has raised concerns
+    7. Lack of rights for toolsets chosen has hindered progress and ability to deliver
 
 ## Tenants of Design
 <pick from the sample sections below and add your own>
