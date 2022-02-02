@@ -6,9 +6,9 @@ Addams Family Accommodation Team Assignment
 
 ## Table of Contents
 
-[Table of Contents](#table-of-contents)
-[Preamble](#preamble)
-[Product Owner](#product-owner)
+[Table of Contents](#table-of-contents)  
+[Preamble](#preamble)  
+[Product Owner](#product-owner)  
 [Rockstars](#team-members)
         Project Deadline
         Project Specification
