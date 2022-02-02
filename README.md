@@ -10,14 +10,13 @@ Addams Family Accommodation Team Assignment
 [Preamble](#preamble)  
 [Product Owner](#product-owner)  
 [Rockstars](#team-members)
-        Project Deadline
-        Project Specification
-        Considerations
-        [Useful Links](#useful-links)
-            For more information visit our other sections
-        Risk Register
-        Tenants of Design
-        Social Contract
+[Project Deadline](#project-deadline)  
+[Project Specification](#project-specification)  
+[Considerations](#considerations)  
+[Useful Links](#useful-links)
+[Risk Register](#risk-register)  
+[Tenants of Design](#tenants-of-design)  
+[Social Contract](#social-contract)  
 
 ## Preamble
 
@@ -86,21 +85,6 @@ Friday April 1st - 23:59
 [Azure Git Repository](https://dev.azure.com/AddamsFamily/AddamsFamily2022/_git/AddamsFamily2022?version=GBmain)  
 Project close out presentation: TBC  
 [Azure Readme Markdown Guide](https://docs.microsoft.com/en-us/azure/devops/project/wiki/markdown-guidance?view=azure-devops) 
-
-### More Information
-For more information visit our other sections
-Section     Description
-Process     Describes the companies process
-Project Log     Log of project activities
-Costings    Overview of the project cost
-Architecture    Outlines the architecture
-Environments    Overview of the environment set-up
-DR Plan     Disaster Recovery Plan and procedures
-Requirements    Overview of the requirements for the project
-SLAs    Service level agreements
-Risk Management     How we manage risk
-Security    Overview of security
-Project Log     Team log for the project
 
 ## Risk Register
 
