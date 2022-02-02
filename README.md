@@ -142,8 +142,8 @@ TO BE COMPLETED
 - Be on time for Stand Ups and meetings.
 - Mobile phones on silent.
 - Everyone has equal voice and valuable contribution.
-- Keep your language and tone professional at all times.
-- Be honest.
+- Keep your language and tone professional at all times
+- Be honest
 
 ### Communication
 
