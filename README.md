@@ -99,7 +99,8 @@ TO BE UPDATED - These are the current Risks on the project, re-aligned on a week
     7. Lack of rights for toolsets chosen has hindered progress and ability to deliver
 
 ## Tenants of Design
-<pick from the sample sections below and add your own>
+TO BE COMPLETED
+    <pick from the sample sections below and add your own>
     Dedication to clean, secure, performant and self documented code
         code Frameworks used
         code coverage tool used
@@ -133,7 +134,7 @@ TO BE UPDATED - These are the current Risks on the project, re-aligned on a week
     Sprint retro will occur on the first Thursday after a sprint concludes.
     The order that people present their sprint retro updates will be based on alphabetical order of those present at the meeting.
     Points raised in standups and during the sprint retrospectives will be noted and posted on the slack channel by the Scrum Master.
-    Sprint retrospectives will also be captured in Azure DevOps (https://dev.azure.com/AddamsFamily/AddamsFamily2022/_apps/hub/ms-devlabs.team-retrospectives.home)
+    Sprint retrospectives will also be captured in [Azure DevOps](https://dev.azure.com/AddamsFamily/AddamsFamily2022/_apps/hub/ms-devlabs.team-retrospectives.home)
     
     Task estimation will be done using <<what method>>.
     
@@ -147,7 +148,7 @@ TO BE UPDATED - These are the current Risks on the project, re-aligned on a week
 ### Communication
 
     Slack is the preferred method of communication.
-    If a demonstration is required use Microsoft Teams.  If possible record the session and upload to the Slack channel.
+    If a demonstration is required use Microsoft Teams (Record if possible).
     No Slack communications between 23:00 and 08:00.
     Raise a problem as soon as you see it.
     Respect each other and understand differences in knowledge.
@@ -167,18 +168,20 @@ TO BE UPDATED - These are the current Risks on the project, re-aligned on a week
     Update the Scrum Board as you progress the story i.e. don’t update at standup.
     Don't be afraid to ask for help.
     Don't be afraid to give constructive critism, as long as it is constructive.
-    Solve roadblocks within the team. If the impediment can’t be solved within the team then give it to the Scrum Master.
+    Solve roadblocks within the team. 
+    If the impediment can’t be solved within the team then give it to the Scrum Master.
 
 ## Other
 
     Sprints will start on January 11th with each sprint lasting three weeks.
-    The Scrum Master role rotates each week, the schedule is available on the on the process section
-    The Product Owner role rotates each week, the schedule is available on the on the process section
+    The Scrum Master role rotates each week, the schedule is available on the on the process section.
+    The Product Owner role rotates each week, the schedule is available on the on the process section.
     Azure DevOps will be used for task management and planning.
     Each member of the team will work at least one story task per week, unless they need to take leave.
 
 ### Branching Strategy
 
+TO BE COMPLETED
 
 ### Estimating Story Points Within Azure DevOps
 
