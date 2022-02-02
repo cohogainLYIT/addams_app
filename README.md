@@ -75,7 +75,8 @@ Friday April 1st - 23:59
     Azure DevOps be used for ticketing and sprint planning.
     Azure DevOps Artifacts will be used as binary repository.
     Postman / Newman will be used to perform unit testing.
-    Sphinx will be used for Automatic Documentation.
+    Sphinx will be used for Automatic Documentation.  
+    SonarCloud will be used for security and code quality testing.
     
 
 ## Useful Links
