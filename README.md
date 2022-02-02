@@ -83,6 +83,7 @@ Friday April 1st - 23:59
 [Project Slack Channel](https://app.slack.com/client/T84LE6L6R/C02P6U2S7RV)  
 [Azure DevOps Ticketing](https://dev.azure.com/AddamsFamily/AddamsFamily2022/_backlogs/backlog/AddamsFamily2022%20Team/Stories/?showParents=true)   
 [Azure Git Repository](https://dev.azure.com/AddamsFamily/AddamsFamily2022/_git/AddamsFamily2022?version=GBmain)  
+[Azure DevOps Sprint Retrospectives](https://dev.azure.com/AddamsFamily/AddamsFamily2022/_apps/hub/ms-devlabs.team-retrospectives.home)  
 Project close out presentation: TBC  
 [Azure Readme Markdown Guide](https://docs.microsoft.com/en-us/azure/devops/project/wiki/markdown-guidance?view=azure-devops) 
 
@@ -127,14 +128,14 @@ TO BE COMPLETED
 ### Meetings
 
     Stand-ups will occur on Tuesdays at 20:00 and Thursday at 18:45.  
-    The order that people give their updates will be based on alphabetical order of those present at the meeting.  
+    People give their updates in alphabetical order of those present at the meeting.  
     Updates will be in the form: What I've done, What I plan to do, Impediments.  
     Sprint planning will occur every Tuesday following the Stand-Up.  
     Please add and update items within Jira prior to the sprint planning session.  
     Sprint retro will occur on the first Thursday after a sprint concludes.  
-    The order that people present their sprint retro updates will be based on alphabetical order of those present at the meeting.  
-    Points raised in standups and during the sprint retrospectives will be noted and posted on the slack channel by the Scrum Master.  
-    Sprint retrospectives will also be captured in [Azure DevOps](https://dev.azure.com/AddamsFamily/AddamsFamily2022/_apps/hub/ms-devlabs.team-retrospectives.home). 
+    The order that people present their sprint retro updates will also be based on alphabetical order.  
+    Points raised in standups and sprint retrospectives will be noted and posted on Slack channel by the Scrum Master.  
+    Sprint retrospectives will also be captured in Azure DevOps. 
     
     Task estimation will be done using <<what method>>.  
     
