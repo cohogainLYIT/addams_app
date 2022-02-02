@@ -1,6 +1,7 @@
 # AFPGDIP2022
-Addams Family Postgraduate Diploma Assignment 2021-2022
-
+Letterkenny Institute of Technology - Postgraduate Diploma in DevOps 2021-2022
+DevOps Project Management
+Addams Family Accommodation Team Assignment 
 
 
 ## Table of Contents
