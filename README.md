@@ -62,28 +62,28 @@ Lecturer: Paul Greaney
 Friday April 1st - 23:59
 
 ## Project Specification  
-- A clean and simple website, based on the Python Flask framework.  
- 
-- An Azure DevOps pipline
-<!-- <team must agree specifications here - below are samples for discussion purposes>     -->
-    Clean and simple design
-    User access levels (client, administrator)
-    Includes at least one self developed api and one webservice
-    To be run over Amazon AWS
+<!-- <Our team agreed specifications are as follows>     -->
+    A clean and simple website design.
+    Two user access levels - Customer and Administrator.
 
-    Frameworks
-    Database
-    Database persistence technology
-    Define the business Requirements
-    Named queries and database triggers for security
-    Regex for cleansing and validation of data before sending to the database.
+    Azure DevOps will be used to implement the pipeline.
+    The site will use the Python Flask Framework.
+    The site will be hosted on an Azure Virtual Machine with a MySQL Database.  
+
+    Azure Application Insights will be used for performance testing.
+    Azure DevOps will be used for source control management.
+    Azure DevOps be used for ticketing and sprint planning.
+    Azure DevOps Artifacts will be used as binary repository.
+    Postman / Newman will be used to perform unit testing.
+    Sphinx will be used for Automatic Documentation.
+    
 
 ## Useful Links
 
-    DC Slack: <<add link to the slack channel here>>
-    Jira:
-    GitHub: https://github.com/devopslecturer/afpgdip2022.git
-    Project close out presentation:
+    Project Slack Channel: https://app.slack.com/client/T84LE6L6R/C02P6U2S7RV
+    Azure DevOps Ticketing: https://dev.azure.com/AddamsFamily/AddamsFamily2022/_backlogs/backlog/AddamsFamily2022%20Team/Stories/?showParents=true
+    Azure Git Repository: https://dev.azure.com/AddamsFamily/AddamsFamily2022/_git/AddamsFamily2022?version=GBmain
+    Project close out presentation: TBC 
 
 ### More Information
 For more information visit our other sections
@@ -139,16 +139,18 @@ These are the current Risks on the project, re-aligned on a weekly basis
 
 ### Meetings
 
-    Stand-ups will occur on Tuesdays at 20:15 and Thursday at 18:45.
-    The order that people give their updates will be based on <<define the order>> of those present at the meeting.
+    Stand-ups will occur on Tuesdays at 20:00 and Thursday at 18:45.
+    The order that people give their updates will be based on alphabetical order of those present at the meeting.
     Updates will be in the form: What I've done, What I plan to do, Impediments
-    Sprint planning will occur every other <<day and time>>.
+    Sprint planning will occur every Tuesday following the Stand-Up.
     Please add and update items within Jira prior to the sprint planning session.
-    Sprint retro will occur once a month, <<Date and time>>.
+    Sprint retro will occur on the first Thursday after a sprint concludes.
     The order that people present their sprint retro updates will be based on alphabetical order of those present at the meeting.
-    Points raised in the sprint retro will be noted and posted on the slack channel by the Scrum Master.
-    Backlog refinement?
+    Points raised in standups and during the sprint retrospectives will be noted and posted on the slack channel by the Scrum Master.
+    Sprint retrospectives will also be captured in Azure DevOps (https://dev.azure.com/AddamsFamily/AddamsFamily2022/_apps/hub/ms-devlabs.team-retrospectives.home)
+    
     Task estimation will be done using <<what method>>.
+    
     Come prepared to meetings.
     Be on time for Stand Ups and meetings.
     Mobile phones on silent.
@@ -158,12 +160,12 @@ These are the current Risks on the project, re-aligned on a weekly basis
 
 ### Communication
 
-    << ?>> is the preferred method of communication.
-    If a demonstration is required use << ?>>, record the session and upload to the Slack channel.
-    No Slack communications between "<Time and Timezone>".
+    Slack is the preferred method of communication.
+    If a demonstration is required use Microsoft Teams.  If possible record the session and upload to the Slack channel.
+    No Slack communications between 23:00 and 08:00.
     Raise a problem as soon as you see it.
     Respect each other and understand differences in knowledge.
-    All team documents are to be created using Markdown language and shared on GitHub.
+    All team documents are to be created using Markdown language and shared on Git.
     There are no silly questions, if you don’t understand, ask.
     Share success stories.
     Focus on the positives.
@@ -171,7 +173,7 @@ These are the current Risks on the project, re-aligned on a weekly basis
     Don’t interrupt and cut another person off while they are talking.
     Listen when someone is talking, don’t interject.
     Zero tolerance for bullying.
-    Communication in this order: <<list in order of preference for the team>>
+    Communication in this order: Slace, EMail
     Agile way of working.
     If are assigned a job, take ownership of it and keep it up to date.
     Stick to your agreed working patterns. Let the team know when you are late or going early.
@@ -183,16 +185,16 @@ These are the current Risks on the project, re-aligned on a weekly basis
 
 ## Other
 
-    Sprints will start <<check with lecturer>>.
+    Sprints will start on January 11th with each sprint lasting three weeks.
     The Scrum Master role rotates each week, the schedule is available on the on the process section
     The Product Owner role rotates each week, the schedule is available on the on the process section
-    Jira will be used for task management and planning.
-    Each member of the team will work <<? story points>> per week, unless they are on vacation.
+    Azure DevOps will be used for task management and planning.
+    Each member of the team will work at least one story task per week, unless they need to take leave.
 
 ### Branching Strategy
 
 
-### Estimating Story Points Within Jira
+### Estimating Story Points Within Azure DevOps
 
 The teams team's velocity is calculated by dividing the the number of points burned each sprint divided by no of sprints. The Velocity chart from Jira (below) is used for this calculation.
 
