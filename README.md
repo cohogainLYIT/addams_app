@@ -138,12 +138,12 @@ TO BE COMPLETED
     
 - Task estimation will be done using <<what method>>.
     
-- Come prepared to meetings.
-- Be on time for Stand Ups and meetings.
-- Mobile phones on silent.
-- Everyone has equal voice and valuable contribution.
-- Keep your language and tone professional at all times
-- Be honest
+> Come prepared to meetings.
+> Be on time for Stand Ups and meetings.
+> Mobile phones on silent.
+> Everyone has equal voice and valuable contribution.
+> Keep your language and tone professional at all times
+> Be honest
 
 ### Communication
 
