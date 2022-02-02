@@ -126,24 +126,24 @@ TO BE COMPLETED
 
 ### Meetings
 
-> Stand-ups will occur on Tuesdays at 20:00 and Thursday at 18:45.  
-> The order that people give their updates will be based on alphabetical order of those present at the meeting.  
-> Updates will be in the form: What I've done, What I plan to do, Impediments.  
-> Sprint planning will occur every Tuesday following the Stand-Up.  
-> Please add and update items within Jira prior to the sprint planning session.  
-> Sprint retro will occur on the first Thursday after a sprint concludes.  
-> The order that people present their sprint retro updates will be based on alphabetical order of those present at the meeting.  
-> Points raised in standups and during the sprint retrospectives will be noted and posted on the slack channel by the Scrum Master.  
-> Sprint retrospectives will also be captured in [Azure DevOps](https://dev.azure.com/AddamsFamily/AddamsFamily2022/_apps/hub/ms-devlabs.team-retrospectives.home). 
+    Stand-ups will occur on Tuesdays at 20:00 and Thursday at 18:45.  
+    The order that people give their updates will be based on alphabetical order of those present at the meeting.  
+    Updates will be in the form: What I've done, What I plan to do, Impediments.  
+    Sprint planning will occur every Tuesday following the Stand-Up.  
+    Please add and update items within Jira prior to the sprint planning session.  
+    Sprint retro will occur on the first Thursday after a sprint concludes.  
+    The order that people present their sprint retro updates will be based on alphabetical order of those present at the meeting.  
+    Points raised in standups and during the sprint retrospectives will be noted and posted on the slack channel by the Scrum Master.  
+    Sprint retrospectives will also be captured in [Azure DevOps](https://dev.azure.com/AddamsFamily/AddamsFamily2022/_apps/hub/ms-devlabs.team-retrospectives.home). 
     
-> Task estimation will be done using <<what method>>.  
+    Task estimation will be done using <<what method>>.  
     
-> Come prepared to meetings.  
-> Be on time for Stand Ups and meetings.  
-> Mobile phones on silent.  
-> Everyone has equal voice and valuable contribution.  
-> Keep your language and tone professional at all times.  
-> Be honest. 
+    Come prepared to meetings.  
+    Be on time for Stand Ups and meetings.  
+    Mobile phones on silent.  
+    Everyone has equal voice and valuable contribution.  
+    Keep your language and tone professional at all times.  
+    Be honest. 
  
 ### Communication
 
