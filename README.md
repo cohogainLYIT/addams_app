@@ -1,5 +1,7 @@
-# afpgdip2022
-Adams Family PgDip Assignment 2021-2022
+# AFPGDIP2022
+Addams Family Postgraduate Diploma Assignment 2021-2022
+
+
 
 ## Table of Contents
 
@@ -30,14 +32,14 @@ Rotates Weekly
 Rotates Weekly
 
 ### Team Members
-Ciarán Ó hÓgáin
-James Bowman
-Jeffrey Aitken
-John Finegan
-Kay O Callaghan
-Kieran Kelleher
-Luis Uriel Cabrera Gonzalez
-Lydia Shadwell
+- Jeffrey Aitken
+- James Bowman
+- John Finegan
+- Luis Uriel Cabrera Gonzalez
+- Kieran Kelleher
+- Kay O'Callaghan
+- Ciarán Ó hÓgáin
+- Lydia Shadwell
 
 Lecturer: Paul Greaney
 
