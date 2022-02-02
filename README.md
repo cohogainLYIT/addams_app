@@ -100,35 +100,35 @@ TO BE UPDATED - These are the current Risks on the project, re-aligned on a week
 
 ## Tenants of Design
 TO BE COMPLETED
-    <pick from the sample sections below and add your own>
-    Dedication to clean, secure, performant and self documented code
-        code Frameworks used
-        code coverage tool used
-        Secure code: Regex for cleansing and validation, Named queries and database triggers
-        performance testing tool to be used
-    Documentation / code commenting (javadoc)/separate branch
-    Datastore for persistance
-    Testing:
-        Unit testing
-        integretation testing
-        UA
-    Environments:
-        staging and production
-        tight configuration management for consistency and reproducibility
-        automated creation and deployments
-        integrated and automated pipeline (commit -> test -> deploy)
-    Github version control:
-        branches used
-        version/release management
-    Agile project management methods/principles (jira)
+    <pick from the sample sections below and add your own>  
+    Dedication to clean, secure, performant and self documented code  
+        code Frameworks used  
+        code coverage tool used  
+        Secure code: Regex for cleansing and validation, Named queries and database triggers  
+        performance testing tool to be used  
+    Documentation / code commenting (javadoc)/separate branch  
+    Datastore for persistance  
+    Testing: 
+        Unit testing  
+        integretation testing  
+        UA  
+    Environments:  
+        staging and production  
+        tight configuration management for consistency and reproducibility  
+        automated creation and deployments  
+        integrated and automated pipeline (commit -> test -> deploy)  
+    Github version control:  
+        branches used  
+        version/release management  
+    Agile project management methods/principles (jira)  
 
 ## Social Contract
 
 ### Meetings
 
-    Stand-ups will occur on Tuesdays at 20:00 and Thursday at 18:45.
-    The order that people give their updates will be based on alphabetical order of those present at the meeting.
-    Updates will be in the form: What I've done, What I plan to do, Impediments
+- Stand-ups will occur on Tuesdays at 20:00 and Thursday at 18:45.
+- The order that people give their updates will be based on alphabetical order of those present at the meeting.
+- Updates will be in the form: What I've done, What I plan to do, Impediments
     Sprint planning will occur every Tuesday following the Stand-Up.
     Please add and update items within Jira prior to the sprint planning session.
     Sprint retro will occur on the first Thursday after a sprint concludes.
