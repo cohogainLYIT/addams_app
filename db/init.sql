@@ -1,5 +1,6 @@
 -- CREATE DATABASE addams;
 use addams;
+SET autocommit = 1;
 
 CREATE TABLE bookings (
   booking_id int not NULL AUTO_INCREMENT,
@@ -25,7 +26,7 @@ VALUES
   ('Haunted House',6,FALSE),
   ('Demonic Domicile',6,FALSE),
   ('Condemned Condominium',8,FALSE),
-  ('Macabre Mansion',10,FALSE), 
+  ('Macabre Mansion',10,FALSE),
   ('Poltergeist Palace',20,FALSE),
   ('Campsite Cemetery',250,FALSE);
 
@@ -46,14 +47,14 @@ BEGIN
     (reservation_name, reservation_date, guests, accomodation)
   VALUES
     (req_name, req_date, req_guests, @availableaccomo);
-  
-  UPDATE accomodations SET booked = TRUE 
-  WHERE accomodation_name=@availableaccomo;
-  
-  SELECT accomodation, reservation_date, booking_id from bookings
-  WHERE accomodation = @availableaccomo and reservation_name = req_name and reservation_date = req_date
-  ;
 
+  UPDATE accomodations SET booked = TRUE
+  WHERE accomodation_name=@availableaccomo;
+
+  SELECT accomodation, reservation_date, booking_id from bookings
+  WHERE accomodation = @availableaccomo and reservation_name = req_name and reservation_date = req_date;
+  
+  COMMIT;
 END  //
 
 DELIMITER ;
