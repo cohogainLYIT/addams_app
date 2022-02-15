@@ -39,10 +39,12 @@ Rotates Weekly
 - Sprint 1, Week 1 : Jeff Aitken
 - Sprint 1, Week 2 : Lydia Shadwell
 - Sprint 1, Week 3 : Ciarán Ó hÓgáin
-- Sprint 2, Week 1 : James Bowman (current)
+- Sprint 2, Week 1 : James Bowman  
+- Sprint 2, Week 2 : Kay O'Callaghan
+- Sprint 2, Week 3 : Kieran Kelleher (Current)
 
 ### Product Owner
-Rotates Weekly
+Rotates Weekly - The previous Scrum Master takes over as Product Manager
 
 ### Team Members
 - Jeffrey Aitken
