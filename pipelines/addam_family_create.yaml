@@ -18,35 +18,27 @@ stages:
       steps:
         - checkout: self
 
+        # Copy Application content to Dev location and launch
         - task: Bash@3
           inputs:
             targetType: 'inline'
             script: |
               set -e
               echo "Dev Deploy"
-              whoami
-              pwd
-              ls -la
               #ufw status
               sudo cp app /home/agent/dev/ -r
               sudo cp db /home/agent/dev/ -r
               sudo cp docker-compose_dev.yml /home/agent/dev/
               sudo docker-compose -f /home/agent/dev/docker-compose_dev.yml up --build -d
             workingDirectory: "$(System.DefaultWorkingDirectory)"
-          displayName: "Copy Dev Website files"
+          displayName: "Copy Dev Website files and launch"
           env:
              ARM_SSH_KEY: $(de-vm-ssh-key)
              ARM_vmuser: $(dev-user)
              ARM_vmpasswd: $(dev-vm-passwd)
              ARM_vmip: $(dev-vm-ip)
 
-        # # Runs unit tests, project doesnt need to be deployed in order to run
-        # - task: Bash@3
-        #   inputs:
-        #     targetType: 'inline'
-        #     script: pytest -v
-        #   displayName: "Perform Pre Deploy Unit Tests"
-
+        # Run SonarCloud Scans
         - task: SonarCloudPrepare@1
           inputs:
             SonarCloud: 'SonarCloud'
@@ -63,20 +55,8 @@ stages:
 
   - stage: Dev_Unit_Tests
     jobs:
-    - job: Dev_Test
-      steps:
-        - checkout: self
 
-        - task: Bash@3
-          inputs:
-            targetType: 'inline'
-            script: |
-              set -e
-              echo "Dev Test"
-              netstat -pnltu
-              #curl -v http:// 13.74.152.222:5000
-            workingDirectory: "$(System.DefaultWorkingDirectory)"
-          displayName: "Perform Dev Unit Tests"
+    # Run Dev Newman Unit tests
     - job: Dev_Unit_Test
       steps:
         - checkout: self
@@ -84,9 +64,12 @@ stages:
           inputs:
             targetType: 'inline'
             script: |
+              echo "Performing Dev Newman Tests"
               newman run Addams_Collection.postman_collection.json -e Addams_Dev.postman_environment.json
             workingDirectory: "$(System.DefaultWorkingDirectory)/Unit_test"
           displayName: "Perform Dev Newman Tests"
+
+# Production stage and acceptance gate
   - stage: Prod_Deploy
     dependsOn: [Dev_Unit_Tests]
     condition: succeeded('Dev_Unit_Tests')
@@ -101,22 +84,19 @@ stages:
             steps:
               - checkout: none
 
+             # Copy Application content to Prod location and launch
               - task: Bash@3
                 inputs:
                   targetType: 'inline'
                   script: |
                     set -e
-                    echo "Dev Deploy"
-                    whoami
-                    pwd
-                    ls -la
-                    #ufw status
+                    echo "Production Deploy"
                     sudo cp app /home/agent/prod/ -r
                     sudo cp db /home/agent/prod/ -r
                     sudo cp docker-compose_prod.yml /home/agent/prod/
                     sudo docker-compose -f /home/agent/prod/docker-compose_prod.yml up --build -d
                   workingDirectory: "$(System.DefaultWorkingDirectory)"
-                displayName: "Copy Dev Website files"
+                displayName: "Copy Prod Website files and launch"
                 env:
                   ARM_SSH_KEY: $(de-vm-ssh-key)
                   ARM_vmuser: $(dev-user)
@@ -125,16 +105,17 @@ stages:
 
   - stage: Prod_Unit_Test
     jobs:
+
+    # Run Prod Newman Unit tests
     - job: Prod_Test
       steps:
         - checkout: self
-
         - task: Bash@3
           inputs:
             targetType: 'inline'
             script: |
-              set -e
-              echo "Prod Test"
-            workingDirectory: "$(System.DefaultWorkingDirectory)"
-          displayName: "Perform Prod Unit tests"  
+              echo "Performing Production Newman Tests"
+              newman run Addams_Collection.postman_collection.json -e Addams_Prod.postman_environment.json
+            workingDirectory: "$(System.DefaultWorkingDirectory)/Unit_test"
+          displayName: "Perform Prod Newman Tests"
 
