@@ -7,10 +7,18 @@ import mysql.connector
 import sys
 #import logging
 import requests
+import os
+
+os.environ.get('FLASK_ENV')
+
+if os.environ.get('FLASK_ENV') == 'production':
+    dbhost="db"
+else:
+    dbhost='db_dev'
 
 mydb = mysql.connector.connect(
   #host="127.0.0.1",
-  host="db",
+  host=dbhost,
   user="addams",
   password="family",
   database="addams",
@@ -154,5 +162,5 @@ def delete(id_data):
     mysql.connection.commit()
     return redirect(url_for('index'))
 
-if __name__ == '__main__':
-    app.run(debug=True)
+#if __name__ == '__main__':
+#    app.run(debug=True)

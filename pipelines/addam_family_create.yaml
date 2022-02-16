@@ -28,6 +28,10 @@ stages:
               pwd
               ls -la
               #ufw status
+              sudo cp app /home/agent/dev/ -r
+              sudo cp db /home/agent/dev/ -r
+              sudo cp docker-compose_dev.yml /home/agent/dev/
+              sudo docker-compose -f /home/agent/dev/docker-compose_dev.yml up --build -d
             workingDirectory: "$(System.DefaultWorkingDirectory)"
           displayName: "Copy Dev Website files"
           env:
@@ -73,7 +77,16 @@ stages:
               #curl -v http:// 13.74.152.222:5000
             workingDirectory: "$(System.DefaultWorkingDirectory)"
           displayName: "Perform Dev Unit Tests"
-
+    - job: Dev_Unit_Test
+      steps:
+        - checkout: self
+        - task: Bash@3
+          inputs:
+            targetType: 'inline'
+            script: |
+              newman run Addams_Collection.postman_collection.json -e Addams_Dev.postman_environment.json
+            workingDirectory: "$(System.DefaultWorkingDirectory)/Unit_test"
+          displayName: "Perform Dev Newman Tests"
   - stage: Prod_Deploy
     dependsOn: [Dev_Unit_Tests]
     condition: succeeded('Dev_Unit_Tests')
@@ -93,9 +106,22 @@ stages:
                   targetType: 'inline'
                   script: |
                     set -e
-                    echo "Prod Deploy"
+                    echo "Dev Deploy"
+                    whoami
+                    pwd
+                    ls -la
+                    #ufw status
+                    sudo cp app /home/agent/prod/ -r
+                    sudo cp db /home/agent/prod/ -r
+                    sudo cp docker-compose_prod.yml /home/agent/prod/
+                    sudo docker-compose -f /home/agent/prod/docker-compose_prod.yml up --build -d
                   workingDirectory: "$(System.DefaultWorkingDirectory)"
-                displayName: "Copy Prod Website files"
+                displayName: "Copy Dev Website files"
+                env:
+                  ARM_SSH_KEY: $(de-vm-ssh-key)
+                  ARM_vmuser: $(dev-user)
+                  ARM_vmpasswd: $(dev-vm-passwd)
+                  ARM_vmip: $(dev-vm-ip)
 
   - stage: Prod_Unit_Test
     jobs:
