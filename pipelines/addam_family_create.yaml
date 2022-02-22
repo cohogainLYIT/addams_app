@@ -76,7 +76,7 @@ stages:
     jobs:
     - deployment: Prod_Deploy
       continueOnError: false
-      environment: Dev
+      environment: Dev_Unit_Tests
       timeoutInMinutes: 5
       strategy:
         runOnce:
