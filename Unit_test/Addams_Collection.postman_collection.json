@@ -64,7 +64,7 @@
 							"});",
 							"",
 							"pm.test(\"Body matches string\", function () {",
-							"    pm.expect(pm.response.text()).to.include(\"You have been booked into\");",
+							"    pm.expect(pm.response.text()).to.include(\"Booking successful!\");",
 							"});",
 							""
 						],
@@ -77,7 +77,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\"reservation_name\": \"{{$randomFullName}}\", \"reservation_date\": \"{{random_timestamp}}\", \"guests\": {{random_number}}}\n",
+					"raw": "{\"reservation_name\": \"{{$randomFullName}}\", \"reservation_date\": \"{{random_timestamp}}\", \"guests\": {{random_number}}, \"nice_to_have\": \"{{$randomCatchPhrase}}\"}\n",
 					"options": {
 						"raw": {
 							"language": "json"

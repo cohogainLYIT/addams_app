@@ -12,19 +12,23 @@
 			<table>
 				<thead>
 				<tr>
+					<th>Booking Reference</th>
 					<th>Reservation Name</th>
 					<th>Reservation Date</th>
 					<th>Guests</th>
+					<th>Special Requests</th>
 				</tr>
 				</thead>
 				<tbody>
 					{% for reservation in reservation_data %}
 						<tr>
+							<td>{{reservation.booking_id}}</td>
 							<td>{{reservation.reservation_name}}</td>
 							<td>{{reservation.reservation_date}}</td>
 							<td>{{reservation.guests}}</td>
+							<td>{{reservation.nice_to_have}}</td>
 							<td>
-							<a href="/delete/{{ reservation.reservation_date }}" class="btn btn-danger btn-xs" onclick="return confirm('Are You Sure For Delete?')">Delete</a>
+							<a href="/delete/{{ reservation.booking_id }}" class="btn btn-danger btn-xs" onclick="return confirm('Are You Sure For Delete?')">Delete</a>
 							</td>
 						</tr>
 					{% endfor %}
