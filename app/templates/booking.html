@@ -11,7 +11,7 @@
 			<h1>Reservations</h1>
 			<form action="{{ url_for('book') }}" method="post">
 				<label for="reservation_name">
-					<em class="fas fa-user"></em>
+					<i class="fas fa-user"></i>
 				</label>
 				<input type="text" name="reservation_name" placeholder="Your Name" id="reservation_name" required>
 				<label for="guests">
@@ -19,7 +19,7 @@
 				</label>
 				<input type="text" name="guests" placeholder="Number of Guests" id="guests" required>
 				<label for="reservation_date">
-					<em class="fas fa-calendar-week"></em>
+					<i class="fas fa-calendar-week"></i>
 				</label>
 				<input type="date" name="reservation_date" placeholder="Booking Date" id="reservation_date" required>
 				<input type="text" name="nice_to_have" placeholder="Special requests" id="nice_to_have">
