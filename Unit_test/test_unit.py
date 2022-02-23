@@ -2,7 +2,7 @@ import os, sys
 p = os.path.abspath('.')
 sys.path.insert(0, p)
 
-from Website.main import app
+from app import app
 import unittest
 import datetime
 

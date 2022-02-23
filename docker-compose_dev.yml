@@ -2,7 +2,7 @@ version: "2"
 services:
   app_dev:
     container_name: Addams_App_Dev
-    build: ./app
+    build: .
     links:
       - db_dev
     ports:
