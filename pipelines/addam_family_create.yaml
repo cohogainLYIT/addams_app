@@ -28,6 +28,7 @@ stages:
               #ufw status
               sudo cp app /home/agent/dev/ -r
               sudo cp db /home/agent/dev/ -r
+              sudo cp Unit_test /home/agent/dev/ -r
               sudo cp Dockerfile /home/agent/dev/
               sudo cp docker-compose_dev.yml /home/agent/dev/
               sudo docker-compose -f /home/agent/dev/docker-compose_dev.yml up --build -d
