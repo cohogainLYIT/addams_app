@@ -94,6 +94,7 @@ stages:
                     echo "Production Deploy"
                     sudo cp app /home/agent/prod/ -r
                     sudo cp db /home/agent/prod/ -r
+                    sudo cp Dockerfile /home/agent/prod/ 
                     sudo cp docker-compose_prod.yml /home/agent/prod/
                     sudo docker-compose -f /home/agent/prod/docker-compose_prod.yml up --build -d
                   workingDirectory: "$(System.DefaultWorkingDirectory)"
