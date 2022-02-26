@@ -163,10 +163,10 @@ TO BE COMPLETED
     Don’t interrupt and cut another person off while they are talking.
     Listen when someone is talking, don’t interject.
     Zero tolerance for bullying.
-    Communication in this order: Slace, EMail
+    Communication in this order: Slack, EMail
     Agile way of working.
     If are assigned a job, take ownership of it and keep it up to date.
-    Stick to your agreed working patterns. Let the team know when you are late or going early.
+    Stick to your agreed working patterns. Let the team know when you are late or leaving early.
     Keep JIRA board updated at all times.
     Update the Scrum Board as you progress the story i.e. don’t update at standup.
     Don't be afraid to ask for help.
@@ -191,4 +191,3 @@ TO BE COMPLETED
 The teams team's velocity is calculated by dividing the the number of points burned each sprint divided by no of sprints. The Velocity chart from Jira (below) is used for this calculation.
 
 The teams current story point velocity is "<Choose the number!>".
-l
