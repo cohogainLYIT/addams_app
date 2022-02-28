@@ -50,10 +50,6 @@
 							"const moment = require('moment');",
 							"pm.globals.set(\"random_timestamp\", moment().add((_.random(1, 90)),'days').format(\"YYYY/MM/DD\"));",
 							"",
-							"pm.environment.set(\"randomCatchPhrase\", Champagne);",
-							"",
-							"pm.environment.set(\"randomFullName\", Ciaran OhOgain);",
-							"",
 							"pm.environment.set(\"random_number\", _.random(1, 15))"
 						],
 						"type": "text/javascript"
