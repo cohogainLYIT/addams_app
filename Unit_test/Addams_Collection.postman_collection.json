@@ -59,7 +59,7 @@
 				},
 				{
 					"listen": "test",
-		#			"script": {
+					"script": {
 						"exec": [
 							"pm.test(\"Status code is 200\", () => {",
 							"  pm.expect(pm.response.code).to.eql(200);",
