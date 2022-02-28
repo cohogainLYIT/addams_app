@@ -163,10 +163,10 @@ TO BE COMPLETED
     Don’t interrupt and cut another person off while they are talking.
     Listen when someone is talking, don’t interject.
     Zero tolerance for bullying.
-    Communication in this order: Slace, EMail
+    Communication in this order: Slack, EMail
     Agile way of working.
     If are assigned a job, take ownership of it and keep it up to date.
-    Stick to your agreed working patterns. Let the team know when you are late or going early.
+    Stick to your agreed working patterns. Let the team know when you are late or leaving early.
     Keep JIRA board updated at all times.
     Update the Scrum Board as you progress the story i.e. don’t update at standup.
     Don't be afraid to ask for help.
