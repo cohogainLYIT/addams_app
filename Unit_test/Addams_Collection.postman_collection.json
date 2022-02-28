@@ -79,7 +79,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\"reservation_name\": \"{{$randomFullName}}\", \"reservation_date\": \"{{random_timestamp}}\", \"guests\": {{random_number}}, \"nice_to_have\": \"{{$randomCatchPhrase}}\"}\n",
+					"raw": "{\"reservation_name\": \"{{randomFullName}}\", \"reservation_date\": \"{{random_timestamp}}\", \"guests\": {{random_number}}, \"nice_to_have\": \"{{randomCatchPhrase}}\"}\n",
 					"options": {
 						"raw": {
 							"language": "json"
