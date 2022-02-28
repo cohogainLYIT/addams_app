@@ -48,7 +48,9 @@
 					"script": {
 						"exec": [
 							"const moment = require('moment');",
+							"pm.globals.set(\"randomFullName\", Ciaran OhOgain);",
 							"pm.globals.set(\"random_timestamp\", moment().add((_.random(1, 90)),'days').format(\"YYYY/MM/DD\"));",
+							"pm.globals.set(\"randomCatchPhrase\", Champagne);",
 							"",
 							"pm.environment.set(\"random_number\", _.random(1, 15))"
 						],
@@ -57,7 +59,7 @@
 				},
 				{
 					"listen": "test",
-					"script": {
+		#			"script": {
 						"exec": [
 							"pm.test(\"Status code is 200\", () => {",
 							"  pm.expect(pm.response.code).to.eql(200);",
