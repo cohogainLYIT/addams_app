@@ -101,7 +101,7 @@ def getaccomodations():
 
     print(bookingdetails['accomodation'], file=sys.stderr)
     accomodation = bookingdetails['accomodation']
-    reservationdate = bookingdetails['reservation_date']
+    reservation_date = bookingdetails['reservation_date']
     booking_id = bookingdetails['booking_id']
     
     if bookingdetails != 'None':
