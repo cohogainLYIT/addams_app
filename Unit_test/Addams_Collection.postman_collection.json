@@ -64,7 +64,7 @@
 							"});",
 							"",
 							"pm.test(\"Body matches string\", function () {",
-							"    pm.expect(pm.response.text()).to.include(\"Booking successful!\");",
+							"    pm.expect(pm.response.text()).to.include(\"Congratulations\");",
 							"});",
 							""
 						],
