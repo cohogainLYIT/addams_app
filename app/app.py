@@ -80,7 +80,7 @@ def getaccomodations():
 
     """ 
     # Output message if something goes wrong...
-    msg = ''
+    #msg = ''
         # Check if "username" and "password" POST requests exist (user submitted form)
     requestbody = request.get_json()
     print("Print This", file=sys.stderr)
