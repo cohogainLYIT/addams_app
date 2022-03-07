@@ -32,6 +32,7 @@ stages:
               sudo cp docs /home/agent/dev/ -r
               sudo cp Dockerfile /home/agent/dev/
               sudo cp docker-compose_dev.yml /home/agent/dev/
+              sudo docker-compose -f /home/agent/dev/docker-compose_dev.yml down
               sudo docker-compose -f /home/agent/dev/docker-compose_dev.yml up --build -d
             workingDirectory: "$(System.DefaultWorkingDirectory)"
           displayName: "Copy Dev Website files and launch"
@@ -98,6 +99,7 @@ stages:
                     sudo cp db /home/agent/prod/ -r
                     sudo cp Dockerfile /home/agent/prod/ 
                     sudo cp docker-compose_prod.yml /home/agent/prod/
+                    sudo docker-compose -f /home/agent/dev/docker-compose_prod.yml down
                     sudo docker-compose -f /home/agent/prod/docker-compose_prod.yml up --build -d
                   workingDirectory: "$(System.DefaultWorkingDirectory)"
                 displayName: "Copy Prod Website files and launch"
