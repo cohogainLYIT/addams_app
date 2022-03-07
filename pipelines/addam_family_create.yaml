@@ -69,6 +69,7 @@ stages:
             targetType: 'inline'
             script: |
               echo "Performing Dev Newman Tests"
+              sleep 60
               newman run Addams_Collection.postman_collection.json -e Addams_Dev.postman_environment.json
             workingDirectory: "$(System.DefaultWorkingDirectory)/Unit_test"
           displayName: "Perform Dev Newman Tests"
