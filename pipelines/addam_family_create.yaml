@@ -26,9 +26,14 @@ stages:
               set -e
               echo "Dev Deploy"
               #ufw status
+              echo $(dev-mysql-user)
               sudo cp app /home/agent/dev/ -r
               sudo cp db /home/agent/dev/ -r
+              sudo cp Unit_test /home/agent/dev/ -r
+              sudo cp docs /home/agent/dev/ -r
+              sudo cp Dockerfile /home/agent/dev/
               sudo cp docker-compose_dev.yml /home/agent/dev/
+              sudo docker-compose -f /home/agent/dev/docker-compose_dev.yml down
               sudo docker-compose -f /home/agent/dev/docker-compose_dev.yml up --build -d
             workingDirectory: "$(System.DefaultWorkingDirectory)"
           displayName: "Copy Dev Website files and launch"
@@ -65,6 +70,7 @@ stages:
             targetType: 'inline'
             script: |
               echo "Performing Dev Newman Tests"
+              sleep 60
               newman run Addams_Collection.postman_collection.json -e Addams_Dev.postman_environment.json
             workingDirectory: "$(System.DefaultWorkingDirectory)/Unit_test"
           displayName: "Perform Dev Newman Tests"
@@ -93,7 +99,11 @@ stages:
                     echo "Production Deploy"
                     sudo cp app /home/agent/prod/ -r
                     sudo cp db /home/agent/prod/ -r
+                    sudo cp Unit_test /home/agent/prod/ -r
+                    sudo cp docs /home/agent/prod/ -r  
+                    sudo cp Dockerfile /home/agent/prod/ 
                     sudo cp docker-compose_prod.yml /home/agent/prod/
+                    sudo docker-compose -f /home/agent/prod/docker-compose_prod.yml down
                     sudo docker-compose -f /home/agent/prod/docker-compose_prod.yml up --build -d
                   workingDirectory: "$(System.DefaultWorkingDirectory)"
                 displayName: "Copy Prod Website files and launch"

@@ -17,7 +17,7 @@
 							"});",
 							"",
 							"pm.test(\"Body matches string\", function () {",
-							"    pm.expect(pm.response.text()).to.include(\"<title>Welcome to the Addams Family Accomodation</title>\");",
+							"    pm.expect(pm.response.text()).to.include(\"<title>Welcome to the Addams Family Accommodation</title>\");",
 							"});"
 						],
 						"type": "text/javascript"

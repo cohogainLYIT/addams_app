@@ -2,14 +2,15 @@ version: "2"
 services:
   app_dev:
     container_name: Addams_App_Dev
-    build: ./app
+    build: .
     links:
       - db_dev
     ports:
       - "5001:5000"
+      - "5002:80"
     environment:
       FLASK_ENV: development
-
+      
   db_dev:
     container_name: Addams_DB_Dev
     image: mysql:5.7
