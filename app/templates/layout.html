@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 	<head>
 		<meta charset="utf-8">
 		<title>{% block title %}{% endblock %}</title>
@@ -10,9 +10,9 @@
 		<nav class="navtop">
 			<div>
 				<h1>Website Title</h1>
-                <a href="{{ url_for('home') }}"><i class="fas fa-home"></i>Home</a>
-				<a href="{{ url_for('profile') }}"><i class="fas fa-user-circle"></i>Profile</a>
-				<a href="{{ url_for('logout') }}"><i class="fas fa-sign-out-alt"></i>Logout</a>
+                <a href="{{ url_for('home') }}"><em class="fas fa-home"></em>Home</a>
+				<a href="{{ url_for('profile') }}"><em class="fas fa-user-circle"></em>Profile</a>
+				<a href="{{ url_for('logout') }}"><em class="fas fa-sign-out-alt"></em>Logout</a>
 			</div>
 		</nav>
 		<div class="content">
