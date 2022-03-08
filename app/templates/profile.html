@@ -6,17 +6,17 @@
 <h2>Profile Page</h2>
 <div>
     <p>Your account details are below:</p>
-    <table>
+    <table summary="Your account details">
         <tr>
-            <td>Username:</td>
+            <th scope="col">Username:</th>
             <td>{{ account['username'] }}</td>
         </tr>
         <tr>
-            <td>Password:</td>
+            <th scope="col">Password:</th>
             <td>{{ account['password'] }}</td>
         </tr>
         <tr>
-            <td>Email:</td>
+            <th scope="col">Email:</th>
             <td>{{ account['email'] }}</td>
         </tr>
     </table>
