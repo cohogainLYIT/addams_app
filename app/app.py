@@ -1,12 +1,3 @@
-"""
-
-   File        :   app.py
-   Created     :   15/01/2022
-   Author      :   Addam's Family 
-   Version     :   v1.0
-   Description :   Main python file for the Addam's family web page  
-                
-"""
 from flask import Flask, render_template, request, redirect, url_for, session
 from flask_mysqldb import MySQL
 import MySQLdb.cursors
@@ -31,21 +22,24 @@ app = Flask(__name__)
 app.secret_key = 'your secret key'
 
 # Enter your database connection details below
-#app.config['MYSQL_HOST'] = '127.0.0.1'
-#app.config['MYSQL_HOST'] = 'localhost'
 app.config['MYSQL_HOST'] = dbhost
 app.config['MYSQL_USER'] = 'addams'
 app.config['MYSQL_PASSWORD'] = 'family'
 app.config['MYSQL_DB'] = 'addams'
 app.config['MYSQL_PORT'] = 3306
-#app.config['MYSQL_PORT'] = 32000
-
 
 # Intialize MySQL
 mysql = MySQL(app)
 
 @app.route('/makeres2', methods=['POST'])
 def makeres2():
+    """
+        **makeres2**
+
+        :return dictFromServer
+
+
+    """
     event_data = request.get_json()
     print(event_data, file=sys.stderr)
     response = requests.post('http://127.0.0.1:5000/getAccomodations', json=event_data)
@@ -53,35 +47,38 @@ def makeres2():
     dictFromServer = response.text
     return dictFromServer
 
+
 @app.route('/getAccomodations', methods=['POST'])
 def getaccomodations():
     """ 
 
         **getAccomodations**
 
-        :return: book_success.html page with name, date, guests, special requests and property
+        API call which triggers CreateBooking store procedure and matches available room
+        to booking details provided.
+
+        :return: html page informing you if your booking is successful or has failed
 
         - Example::
 
             name = Adam Addam
             date = 08/02/2022
             guests = 2
-            property = Haunted House
+            property = Creepy Caravan
         
         - Expected Success Response:: 
 
+            Renders book_success.html with booking details
             HTTP Status Code: 200
-            Thank you for your booking!
+            "Booking Successful!"
         
         - Expected Fail Response::
 
-            HTTP Status Code: 400
-            Apologies but your booking failed.
+            Renders book_fail.html
+            HTTP Status Code: 200
+            "Booking failed."
 
     """ 
-    # Output message if something goes wrong...
-    #msg = ''
-        # Check if "username" and "password" POST requests exist (user submitted form)
     requestbody = request.get_json()
     print("Print This", file=sys.stderr)
 
@@ -109,8 +106,12 @@ def getaccomodations():
     else:
         return render_template('book_fail.html')
 
+
 @app.route('/admin/', methods=['GET','POST'])
 def index():
+    """
+    
+    """
     if not session.get("loggedin") is None:
         if session['loggedin'] == True:
             cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
@@ -123,29 +124,27 @@ def index():
     else:
         return redirect(url_for('login'))
 
+
 @app.route('/delete/<string:id_data>', methods = ['GET'])
 def delete(id_data):
     """ 
 
         **Delete method**
 
+        Deletes booking record from mysql bookings table.
+
         :param id_data: id of booking
         :type id_data: int
-        :return: I am not sure what this returns
+
 
         - Example::
 
-            booking_id = 4
+            id_data = 4
         
         - Expected Success Response:: 
 
             HTTP Status Code: 200
-            Booking deleted.
-        
-        - Expected Fail Response::my
-
-            HTTP Status Code: 400
-            Failed to delete booking.
+            Record Has Been Deleted Successfully
 
     """
     flash("Record Has Been Deleted Successfully")
@@ -158,25 +157,7 @@ def delete(id_data):
 def book():
     """ 
 
-        **Book page**
 
-        :return: I am not sure what this returns
-
-        - Example::
-
-            name = Adam Addam
-            date = 08/02/2022
-            guests = 2
-        
-        - Expected Success Response:: 
-
-            HTTP Status Code: 200
-            Thank you for your booking!
-        
-        - Expected Fail Response::
-
-            HTTP Status Code: 400
-            Apologies but your booking failed.
 
     """
 
@@ -213,27 +194,23 @@ def book():
 @app.route('/login/', methods=['GET', 'POST'])
 def login():
     """ 
-
         **Login page**
 
-        :return: I am not sure what this returns
+        Checks login credentials against accounts mysql table and grants access if account and credentials exists.
 
         - Example::
 
-            username = Adam Addam
-            password = boo!
+            username = Adam_Addam
+            password = Bo0!
         
-        - Expected Success Response:: 
+        - If credentials exists:: 
 
-            HTTP Status Code: 200
-
-            Welcome Adam!
+            :return: home.html
         
-        - Expected Fail Response::
+        - If credentials do not exists:: 
 
-            HTTP Status Code: 400
-
-            Incorrect username/password.
+            Incorrect username/password!
+            :return: index.html
 
     """
     # Output message if something goes wrong...
@@ -266,19 +243,46 @@ def login():
     # Show the login form with message (if any)
     return render_template('index.html', msg=msg)
 
+
 # http://localhost:5000/python/logout - this will be the logout page
 @app.route('/logout')
 def logout():
+    """
+    
+    """
     # Remove session data, this will log the user out
-   session.pop('loggedin', None)
-   session.pop('id', None)
-   session.pop('username', None)
-   # Redirect to login page
-   return redirect(url_for('login'))
+    session.pop('loggedin', None)
+    session.pop('id', None)
+    session.pop('username', None)
+    # Redirect to login page
+    return redirect(url_for('login'))
+
 
 # http://localhost:5000/pythinlogin/register - this will be the registration page, we need to use both GET and POST requests
 @app.route('/register', methods=['GET', 'POST'])
 def register():
+    """
+        **Registration page**
+
+        Registers user credentials as account if provided credentials do not already exist and meet requirements.
+
+         - If username already in accounts database:: 
+
+            Account already exists!
+        
+        - If email not correct format::
+
+            Invalid email address!
+
+         - If username not correct format:: 
+
+            Username must contain only characters and numbers!
+        
+        - If credentials meet requirements and not in database::
+
+            You have successfully registered!
+
+    """
     # Output message if something goes wrong...
     msg = ''
     # Check if "username", "password" and "email" POST requests exist (user submitted form)
@@ -311,9 +315,24 @@ def register():
     # Show registration form with message (if any)
     return render_template('register.html', msg=msg)
 
+
 # http://localhost:5000/pythinlogin/home - this will be the home page, only accessible for loggedin users
 @app.route('/home')
 def home():
+    """
+        **Home page**
+
+        Home page accessible only by users logged in.
+
+         - If user is logged in:: 
+
+            :return: home.html
+        
+        - If user not logged in::
+
+            :return: login.html
+
+    """
     # Check if user is loggedin
     if 'loggedin' in session:
         # User is loggedin show them the home page
@@ -321,9 +340,24 @@ def home():
     # User is not loggedin redirect to login page
     return redirect(url_for('login'))
 
+
 # http://localhost:5000/pythinlogin/profile - this will be the profile page, only accessible for loggedin users
 @app.route('/profile')
 def profile():
+    """
+        **Profile page**
+
+        Profile page accessible only by users logged in.
+
+         - If user is logged in:: 
+
+            :return: profile.html
+        
+        - If user not logged in::
+
+            :return: login.html
+
+    """
     # Check if user is loggedin
     if 'loggedin' in session:
         # We need all the account info for the user so we can display it on the profile page
