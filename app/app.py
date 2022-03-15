@@ -108,7 +108,7 @@ def getaccomodations():
 
 
 @app.route('/admin/', methods=['GET','POST'])
-def index():
+def admin():
     """
     
     """
@@ -151,7 +151,7 @@ def delete(id_data):
     cur = mysql.connection.cursor()
     cur.execute("DELETE FROM bookings WHERE booking_id = %s", (id_data,))
     mysql.connection.commit()
-    return redirect(url_for('index'))
+    return redirect(url_for('admin'))
 
 @app.route('/', methods=['GET', 'POST'])
 def book():

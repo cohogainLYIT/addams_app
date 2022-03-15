@@ -15,7 +15,7 @@ body {
   	box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.3);
   	margin: 100px auto;
 }
-.login h1, .register h1 {
+.login h1, .register h1, .booking h1{
   	text-align: center;
   	color: #5b6574;
   	font-size: 24px;
@@ -76,6 +76,10 @@ body {
 .login form input[type="submit"]:hover, .register form input[type="submit"]:hover {
   	background-color: #2868c7;
   	transition: background-color 0.2s;
+}
+.booking table {
+	table-layout: auto;
+	width: 100%;  
 }
 .navtop {
   	background-color: #2f3947;
