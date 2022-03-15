@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 	<head>
 		<meta charset="utf-8">
 		<title>Welcome to the Addams Family Accommodation</title>
@@ -14,15 +14,15 @@
 			<h1>Addams Family Accommodation<br>Reservations</h1>
 			<form action="{{ url_for('book') }}" method="post">
 				<label for="reservation_name">
-					<i class="fas fa-user"></i>
+					<em class="fas fa-user"></em>
 				</label>
 				<input type="text" name="reservation_name" placeholder="Your Name" id="reservation_name" required>
 				<label for="guests">
-					<i class="fas fa-users"></i>
+					<em class="fas fa-users"></em>
 				</label>
 				<input type="text" name="guests" placeholder="Number of Guests" id="guests" required>
 				<label for="reservation_date">
-					<i class="fas fa-calendar-week"></i>
+					<em class="fas fa-calendar-week"></em>
 				</label>
 				<input type="date" name="reservation_date" placeholder="Booking Date" id="reservation_date" required>
 				<input type="text" name="nice_to_have" placeholder="Special requests" id="nice_to_have">
