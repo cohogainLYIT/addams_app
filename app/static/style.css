@@ -9,6 +9,15 @@ body {
   	background-color: #435165;
   	margin: 0;
 }
+.admin {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+  color: white;
+}
+a.visited {
+  color: white;
+}
 .login, .register {
   	width: 400px;
   	background-color: #ffffff;
