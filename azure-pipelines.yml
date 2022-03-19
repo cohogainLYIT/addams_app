@@ -1,0 +1,35 @@
+variables:
+  - group: dev-variable-group
+  - group: prod-variable-group
+
+trigger:
+  batch: true
+  branches:
+    include:
+      - develop
+
+pool:
+  name: 'Default'
+
+stages:
+  - stage: Test
+    jobs:
+    - job: Test
+      steps:
+        - checkout: self
+
+        # Copy Application content to Dev location and launch
+        - task: Bash@3
+          inputs:
+            targetType: 'inline'
+            script: |
+              echo $(dev-mysql-root)
+              echo $(d-mysql-rootPW)
+            workingDirectory: "$(System.DefaultWorkingDirectory)"
+          displayName: "Test"
+          env:
+             ARM_SSH_KEY: $(de-vm-ssh-key)
+             ARM_vmuser: $(dev-user)
+             ARM_vmpasswd: $(dev-vm-passwd)
+             ARM_vmip: $(dev-vm-ip)
+             d-mysql-rootPW: $(dev-mysql-root)
