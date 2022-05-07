@@ -1,6 +1,5 @@
 variables:
   - group: dev-variable-group
-  - group: prod-variable-group
   
 trigger:
   batch: true
