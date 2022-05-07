@@ -1,6 +1,7 @@
 variables:
   - group: dev-variable-group
-
+  - group: prod-variable-group
+  
 trigger:
   batch: true
   branches:
@@ -8,7 +9,7 @@ trigger:
       - develop
 
 pool:
-  name: 'Default'
+  vmImage: ubuntu-latest
 
 stages:
   - stage: Dev_Deploy
