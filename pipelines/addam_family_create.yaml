@@ -1,6 +1,5 @@
 variables:
   - group: dev-variable-group
-  - group: prod-variable-group
 
 trigger:
   batch: true
@@ -39,8 +38,8 @@ stages:
           displayName: "Copy Dev Website files and launch"
           env:
              ARM_SSH_KEY: $(de-vm-ssh-key)
-             ARM_vmuser: $(dev-user)
-             ARM_vmpasswd: $(dev-vm-passwd)
+             #ARM_vmuser: $(dev-user)
+             #ARM_vmpasswd: $(dev-vm-passwd)
              ARM_vmip: $(dev-vm-ip)
 
         # Run SonarCloud Scans
@@ -74,58 +73,3 @@ stages:
               newman run Addams_Collection.postman_collection.json -e Addams_Dev.postman_environment.json
             workingDirectory: "$(System.DefaultWorkingDirectory)/Unit_test"
           displayName: "Perform Dev Newman Tests"
-
-# Production stage and acceptance gate
-  - stage: Prod_Deploy
-    dependsOn: [Dev_Unit_Tests]
-    condition: succeeded('Dev_Unit_Tests')
-    jobs:
-    - deployment: Prod_Deploy
-      continueOnError: false
-      environment: Dev_Unit_Tests
-      timeoutInMinutes: 5
-      strategy:
-        runOnce:
-          deploy:
-            steps:
-              - checkout: none
-
-             # Copy Application content to Prod location and launch
-              - task: Bash@3
-                inputs:
-                  targetType: 'inline'
-                  script: |
-                    set -e
-                    echo "Production Deploy"
-                    sudo cp app /home/agent/prod/ -r
-                    sudo cp db /home/agent/prod/ -r
-                    sudo cp Unit_test /home/agent/prod/ -r
-                    sudo cp docs /home/agent/prod/ -r  
-                    sudo cp Dockerfile /home/agent/prod/ 
-                    sudo cp docker-compose_prod.yml /home/agent/prod/
-                    sudo docker-compose -f /home/agent/prod/docker-compose_prod.yml down
-                    sudo docker-compose -f /home/agent/prod/docker-compose_prod.yml up --build -d
-                  workingDirectory: "$(System.DefaultWorkingDirectory)"
-                displayName: "Copy Prod Website files and launch"
-                env:
-                  ARM_SSH_KEY: $(de-vm-ssh-key)
-                  ARM_vmuser: $(dev-user)
-                  ARM_vmpasswd: $(dev-vm-passwd)
-                  ARM_vmip: $(dev-vm-ip)
-
-  - stage: Prod_Unit_Test
-    jobs:
-
-    # Run Prod Newman Unit tests
-    - job: Prod_Test
-      steps:
-        - checkout: self
-        - task: Bash@3
-          inputs:
-            targetType: 'inline'
-            script: |
-              echo "Performing Production Newman Tests"
-              newman run Addams_Collection.postman_collection.json -e Addams_Prod.postman_environment.json
-            workingDirectory: "$(System.DefaultWorkingDirectory)/Unit_test"
-          displayName: "Perform Prod Newman Tests"
-

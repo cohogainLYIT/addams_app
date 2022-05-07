@@ -1,6 +1,5 @@
 variables:
   - group: dev-variable-group
-  - group: prod-variable-group
 
 trigger:
   batch: true
@@ -29,7 +28,7 @@ stages:
           displayName: "Test"
           env:
              ARM_SSH_KEY: $(de-vm-ssh-key)
-             ARM_vmuser: $(dev-user)
-             ARM_vmpasswd: $(dev-vm-passwd)
+             #ARM_vmuser: $(dev-user)
+             #ARM_vmpasswd: $(dev-vm-passwd)
              ARM_vmip: $(dev-vm-ip)
              d-mysql-rootPW: $(dev-mysql-root)
