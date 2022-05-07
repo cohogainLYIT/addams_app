@@ -1,0 +1,75 @@
+variables:
+  - group: dev-variable-group
+  
+trigger:
+  batch: true
+  branches:
+    include:
+      - develop
+
+pool:
+  vmImage: ubuntu-latest
+
+stages:
+  - stage: Dev_Deploy
+    jobs:
+    - job: Dev_Deploy
+      steps:
+        - checkout: self
+
+        # Copy Application content to Dev location and launch
+        - task: Bash@3
+          inputs:
+            targetType: 'inline'
+            script: |
+              set -e
+              echo "Dev Deploy"
+              #ufw status
+              echo $(dev-mysql-user)
+              sudo cp app /home/agent/dev/ -r
+              sudo cp db /home/agent/dev/ -r
+              sudo cp Unit_test /home/agent/dev/ -r
+              sudo cp docs /home/agent/dev/ -r
+              sudo cp Dockerfile /home/agent/dev/
+              sudo cp docker-compose_dev.yml /home/agent/dev/
+              sudo docker-compose -f /home/agent/dev/docker-compose_dev.yml down
+              sudo docker-compose -f /home/agent/dev/docker-compose_dev.yml up --build -d
+            workingDirectory: "$(System.DefaultWorkingDirectory)"
+          displayName: "Copy Dev Website files and launch"
+          env:
+             ARM_SSH_KEY: $(de-vm-ssh-key)
+             #ARM_vmuser: $(dev-user)
+             #ARM_vmpasswd: $(dev-vm-passwd)
+             ARM_vmip: $(dev-vm-ip)
+
+        # Run SonarCloud Scans
+        - task: SonarCloudPrepare@1
+          inputs:
+            SonarCloud: 'SonarCloud'
+            organization: 'addamsfamily'
+            scannerMode: 'CLI'
+            configMode: 'manual'
+            cliProjectKey: 'AddamsFamily_AddamsFamily2022'
+            cliProjectName: 'AddamsFamily2022'
+            cliSources: '.'
+        - task: SonarCloudAnalyze@1
+        - task: SonarCloudPublish@1
+          inputs:
+            pollingTimeoutSec: '300'
+
+  - stage: Dev_Unit_Tests
+    jobs:
+
+    # Run Dev Newman Unit tests
+    - job: Dev_Unit_Test
+      steps:
+        - checkout: self
+        - task: Bash@3
+          inputs:
+            targetType: 'inline'
+            script: |
+              echo "Performing Dev Newman Tests"
+              sleep 60
+              newman run Addams_Collection.postman_collection.json -e Addams_Dev.postman_environment.json
+            workingDirectory: "$(System.DefaultWorkingDirectory)/Unit_test"
+          displayName: "Perform Dev Newman Tests"
