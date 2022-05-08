@@ -26,6 +26,8 @@ stages:
               echo "Dev Deploy"
               #ufw status
               echo $(dev-mysql-user)
+              mkdir agent
+              mkdir dev
               sudo cp app /home/agent/dev/ -r
               sudo cp db /home/agent/dev/ -r
               sudo cp Unit_test /home/agent/dev/ -r
