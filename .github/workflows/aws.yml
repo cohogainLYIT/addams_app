@@ -48,7 +48,9 @@ jobs:
         REMOTE_HOST: ${{ secrets.HOST_DNS }}
         REMOTE_USER: ${{ secrets.USERNAME }}
         TARGET: ${{ secrets.TARGET_DIR }}
-
+    
+    - name: Set -e
+      run: set -e
     - name: Tear down running container
       run: sudo docker-compose -f docker-compose_dev.yml down
     - name: Start docker container
