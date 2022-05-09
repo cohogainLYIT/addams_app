@@ -46,7 +46,7 @@ jobs:
       env:
         SSH_PRIVATE_KEY: ${{ secrets.EC2_SSH_KEY }}
         REMOTE_HOST: ${{ secrets.HOST_DNS }}
-        REMOTE_USER: ${{ secret.USERNAME }}
+        REMOTE_USER: ${{ secrets.USERNAME }}
         TARGET: ${{ secrets.TARGET_DIR }}
 
     - name: Tear down running container
