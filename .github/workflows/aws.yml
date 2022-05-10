@@ -49,15 +49,22 @@ jobs:
         REMOTE_USER: ${{ secrets.USERNAME }}
         TARGET: ${{ secrets.TARGET_DIR }}
     
-    - name: Launch web app 
-      uses: appleboy/ssh-action@master
-      with:
-        host: ${{ secrets.HOST_DNS }}
-        username: ${{ secrets.USERNAME }}
-        key: ${{ secrets.EC2_SSH_KEY }}
-        port: 22
-        script: |
-          set -e
-          sudo docker-compose -f docker-compose_dev.yml down
-          sudo docker-compose -f docker-compose_dev.yml up --build -d
+#    - name: Launch web app 
+#      uses: appleboy/ssh-action@master
+#      with:
+#        host: ${{ secrets.HOST_DNS }}
+#        username: ${{ secrets.USERNAME }}
+#        key: ${{ secrets.EC2_SSH_KEY }}
+#        port: 22
+#        script: |
+#          set -e
+#          sudo docker-compose -f docker-compose_dev.yml down
+#          sudo docker-compose -f docker-compose_dev.yml up --build -d
+
+    - name: Unit tests
+      run: |
+        cd Unit_test
+        newman run Addams_Collection.postman_collection.json -e Addams_Dev.postman_environment.json
+      
+      
     
