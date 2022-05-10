@@ -41,7 +41,7 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v3
 
-    - name: Configure AWS credentials
+    - name: Deploy app to EC2 server
       uses: easingthemes/ssh-deploy@main
       env:
         SSH_PRIVATE_KEY: ${{ secrets.EC2_SSH_KEY }}
@@ -49,10 +49,15 @@ jobs:
         REMOTE_USER: ${{ secrets.USERNAME }}
         TARGET: ${{ secrets.TARGET_DIR }}
     
-    - name: Set -e
-      run: set -e
-    - name: Tear down running container
-      run: sudo docker-compose -f docker-compose_dev.yml down
-    - name: Start docker container
-      run: sudo docker-compose -f docker-compose_dev.yml up --build -d
+    - name: Launch web app 
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.HOST_DNS }}
+        username: ${{ secrets.USERNAME }}
+        key: ${{ secrets.EC2_SSH_KEY }}
+        port: 22
+        script: |
+          set -e
+          sudo docker-compose -f docker-compose_dev.yml down
+          sudo docker-compose -f docker-compose_dev.yml up --build -d
     
