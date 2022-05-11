@@ -65,8 +65,7 @@ jobs:
             
       - name: Run benchmark
         run: |
-          ls -l
-          cd addams/Unit_test
+          cd Unit_test
           pip install -r requirements.txt
           pytest bench.py --benchmark-json output.json   
 
