@@ -59,8 +59,8 @@ jobs:
         port: 22
         script: |
           set -e
-          sudo docker-compose -f docker-compose_dev.yml down
-          sudo docker-compose -f docker-compose_dev.yml up --build -d
+          sudo docker-compose -f addams/docker-compose_dev.yml down
+          sudo docker-compose -f addams/docker-compose_dev.yml up --build -d
 
 #    - name: Unit tests
 #      run: |
