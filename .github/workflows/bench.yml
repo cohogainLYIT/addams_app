@@ -19,6 +19,7 @@ jobs:
           python-version: 3.9
       - name: Run benchmark
         run: |
+          pwd
           cd Unit_test
           pip install -r requirements.txt
           pytest bench.py --benchmark-json output.json
