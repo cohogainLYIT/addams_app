@@ -54,8 +54,8 @@ jobs:
       with:
         host: ${{ secrets.HOST_DNS }}
         username: ${{ secrets.USERNAME }}
-        key: ${{ secrets.EC2_SSH_KEY }}
-  #      password: ${{ secrets.PASSWORD }}
+  #      key: ${{ secrets.EC2_SSH_KEY }}
+        password: ${{ secrets.PASSWORD }}
         port: 22
         script: |
           set -e
