@@ -39,7 +39,10 @@ jobs:
 
     steps:
     - name: Checkout
-      uses: actions/checkout@v3
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v2
+        with:
+          python-version: 3.9
 
     - name: Deploy app to EC2 server
       uses: easingthemes/ssh-deploy@main
@@ -65,18 +68,9 @@ jobs:
   #    run: |
   #      cd Unit_test
   #      newman run Addams_Collection.postman_collection.json -e Addams_Dev.postman_environment.json
-      
-  benchmark:
-    name: Run pytest-benchmark benchmark example
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-python@v2
-        with:
-          python-version: 3.9
-      - name: Run benchmark
-        run: |
-          cd addams/Unit_test
-          pip install -r requirements.txt
-          pytest bench.py --benchmark-json output.json      
     
+    - name: Run benchmark
+      run: |
+        cd addams/Unit_test
+        pip install -r requirements.txt
+        pytest bench.py --benchmark-json output.json      
