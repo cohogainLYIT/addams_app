@@ -1,4 +1,4 @@
-from app import getaccomadation
+from app.app import getaccomadation
 import pytest
 
 def test_getaccomadation(benchmark):
