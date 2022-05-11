@@ -39,10 +39,7 @@ jobs:
 
     steps:
     - name: Checkout
-      - uses: actions/checkout@v3
-      - uses: actions/setup-python@v2
-        with:
-          python-version: 3.9
+        uses: actions/checkout@v3
 
     - name: Deploy app to EC2 server
       uses: easingthemes/ssh-deploy@main
@@ -63,6 +60,17 @@ jobs:
           set -e
           sudo docker-compose -f addams/docker-compose_dev.yml down
           sudo docker-compose -f addams/docker-compose_dev.yml up --build -d
+          
+    - name: Run pytest-benchmark benchmark example
+        - uses: actions/checkout@v2
+        - uses: actions/setup-python@v2
+          with:
+            python-version: 3.9
+        - name: Run benchmark
+          run: |
+            cd addams/Unit_test
+            pip install -r requirements.txt
+            pytest bench.py --benchmark-json output.json   
 
   #  - name: Unit tests
   #    run: |
@@ -74,3 +82,6 @@ jobs:
         cd addams/Unit_test
         pip install -r requirements.txt
         pytest bench.py --benchmark-json output.json      
+
+   
+    
