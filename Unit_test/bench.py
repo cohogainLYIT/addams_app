@@ -1,4 +1,6 @@
-from app.app import getaccomadation
+import sys
+sys.path.append('/home/addams/app/')
+from app import getaccomadation
 import pytest
 
 def test_getaccomadation(benchmark):
