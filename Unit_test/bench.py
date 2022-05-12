@@ -1,5 +1,5 @@
 import sys
-sys.path.append('/home/runner/work/addams_app/addams_app/app')
+sys.path.append('addams_app/app')
 from app import getaccomadation
 import pytest
 
