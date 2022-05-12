@@ -12,9 +12,6 @@ then
     cd .. 
     cp -r docs/_build/html /var/www/
     /etc/init.d/apache2 start
-    cd Unit_test
-    pip install -r requirements.txt
-    pytest bench.py --benchmark-json output.json
 else
 echo "Sleeping 15 seconds for mysql DB to come online"
 sleep 15
