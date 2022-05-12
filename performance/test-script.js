@@ -11,6 +11,6 @@ export let options = {
 };
 
 export default function() {
-    http.get('http://ec2-54-74-169-197.eu-west-1.compute.amazonaws.com/')
+    http.get('http://ec2-54-74-169-197.eu-west-1.compute.amazonaws.com:5001/')
     sleep(3);
 }
