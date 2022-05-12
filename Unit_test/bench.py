@@ -1,5 +1,3 @@
-import sys
-sys.path.append('addams_app/app')
 from app import getaccomadation
 import pytest
 
