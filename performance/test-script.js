@@ -1,13 +1,9 @@
-import { group, sleep } from 'k6';
-import http from 'k6/http/';
+import { sleep, check } from 'k6';
+import http from 'k6/http';
 
-export let options = {
-    maxRedirects: 0,
-    stages: [
-        { target: 20, duration: "20s"},
-        { target: 20, duration: "40s"},
-        { target: 0, duration: "20s"}
-    ]
+export const options = {
+   duration: '2m',
+   vus: 10
 };
 
 export default function() {
