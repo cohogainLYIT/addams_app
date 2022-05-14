@@ -63,10 +63,10 @@ jobs:
             sudo docker-compose -f addams/docker-compose_dev.yml down
             sudo docker-compose -f addams/docker-compose_dev.yml up --build -d
 
-      - name: Run k6 smoke test
-        uses: grafana/k6-action@v0.2.0
-        with:
-          filename: performance/smoke_test.js
+  #    - name: Run k6 smoke test
+  #      uses: grafana/k6-action@v0.2.0
+  #      with:
+  #        filename: performance/smoke_test.js
 
       #  - name: Unit tests
       #    run: |
