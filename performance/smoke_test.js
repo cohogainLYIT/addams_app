@@ -10,12 +10,12 @@ export const options = {
     },
 };
 
-const BASE_URL = 'http://ec2-3-249-228-212.eu-west-1.compute.amazonaws.com:5001';
+const BASE_URL = 'http://ec2-3-249-228-212.eu-west-1.compute.amazonaws.com:5000';
 const USERNAME = 'Gomez';
 const PASSWORD = 'Fester';
 
 export default () => {
-    const loginRes = http.post('${BASE_URL}/login', {
+    const loginRes = http.post(`${BASE_URL}/login/', {
         username: USERNAME,
         password: PASSWORD,
     });
