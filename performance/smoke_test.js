@@ -15,8 +15,8 @@ const USERNAME = 'Gomez';
 const PASSWORD = 'Fester';
 
 export default () => {
-    const loginRes = http.post(`${BASE_URL}/login/', {
-        username: USERNAME,
-        password: PASSWORD,
+    const loginRes = http.post(`${BASE_URL}/login/`, {
+      username: USERNAME,
+      password: PASSWORD,
     });
 };
