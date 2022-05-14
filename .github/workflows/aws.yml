@@ -63,15 +63,19 @@ jobs:
             sudo docker-compose -f addams/docker-compose_dev.yml down
             sudo docker-compose -f addams/docker-compose_dev.yml up --build -d
 
-  #    - name: Run k6 smoke test
-  #      uses: grafana/k6-action@v0.2.0
-  #      with:
-  #        filename: performance/smoke_test.js
+      - name: Sleep for 15s
+        run: sleep 15s
+        shell: bash
 
-      #  - name: Unit tests
-      #    run: |
-      #      cd Unit_test
-      #      newman run Addams_Collection.postman_collection.json -e Addams_Dev.postman_environment.json
+      - name: Run k6 smoke test
+        uses: grafana/k6-action@v0.2.0
+        with:
+          filename: performance/smoke_test.js
+
+   #     - name: Unit tests
+   #       run: |
+   #         cd Unit_test
+   #         newman run Addams_Collection.postman_collection.json -e Addams_Dev.postman_environment.json
     
 
    
