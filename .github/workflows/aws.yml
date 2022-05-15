@@ -70,7 +70,7 @@ jobs:
       - name: Run k6 smoke test
         uses: grafana/k6-action@v0.2.0
         with:
-          filename: performance/smoke_test.js
+          filename: performance/Login.js
 
    #     - name: Unit tests
    #       run: |
