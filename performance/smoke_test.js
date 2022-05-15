@@ -16,21 +16,14 @@ const PASSWORD = 'Fester';
 
 
 export default function login() {
-    let response
+    let response = http.get('http://ec2-52-213-198-226.eu-west-1.compute.amazonaws.com:5001/login/')
+    
+    sleep(6.2)
   
-    group(
-      'page_1 - http://ec2-52-213-198-226.eu-west-1.compute.amazonaws.com:5001/login/',
-      function () {
-        response = http.get('http://ec2-52-213-198-226.eu-west-1.compute.amazonaws.com:5001/login/')
-        sleep(6.2)
+    response = http.post('http://ec2-52-213-198-226.eu-west-1.compute.amazonaws.com:5001/login/',
+    {
+        username: 'Gomez',
+        password: 'Fester',
+    })
+}
   
-        response = http.post(
-          'http://ec2-52-213-198-226.eu-west-1.compute.amazonaws.com:5001/login/',
-          {
-            username: 'Gomez',
-            password: 'Fester',
-          }
-        )
-      }
-    )
-  }
