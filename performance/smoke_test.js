@@ -21,11 +21,7 @@ export default function login() {
     group(
       'page_1 - http://ec2-52-213-198-226.eu-west-1.compute.amazonaws.com:5001/login/',
       function () {
-        response = http.get('http://ec2-52-213-198-226.eu-west-1.compute.amazonaws.com:5001/login/', {
-          headers: {
-            'upgrade-insecure-requests': '1',
-          },
-        })
+        response = http.get('http://ec2-52-213-198-226.eu-west-1.compute.amazonaws.com:5001/login/')
         sleep(6.2)
   
         response = http.post(
@@ -33,13 +29,6 @@ export default function login() {
           {
             username: 'Gomez',
             password: 'Fester',
-          },
-          {
-            headers: {
-              'content-type': 'application/x-www-form-urlencoded',
-              origin: 'http://ec2-52-213-198-226.eu-west-1.compute.amazonaws.com:5001',
-              'upgrade-insecure-requests': '1',
-            },
           }
         )
       }
