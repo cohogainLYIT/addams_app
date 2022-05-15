@@ -15,7 +15,7 @@ const USERNAME = 'Gomez';
 const PASSWORD = 'Fester';
 
 
-export function login() {
+export default function login() {
     let response = http.get('http://ec2-52-213-198-226.eu-west-1.compute.amazonaws.com:5001/login/')
     
     sleep(5)
