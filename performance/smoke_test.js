@@ -15,7 +15,7 @@ const USERNAME = 'Gomez';
 const PASSWORD = 'Fester';
 
 
-export function login() {
+export default function login() {
     let response
   
     group(
