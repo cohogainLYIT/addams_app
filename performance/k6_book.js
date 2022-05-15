@@ -13,7 +13,7 @@ export const options = {
 const BASE_URL = 'http://ec2-52-213-198-226.eu-west-1.compute.amazonaws.com:5001/';
   
 export default function book() {
-    let response = http.get(`${BASE_URL}/:5001/`)
+    let response = http.get(`${BASE_URL}:5001/`)
     
     sleep(5)
   
