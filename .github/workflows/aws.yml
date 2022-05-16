@@ -76,6 +76,18 @@ jobs:
         run: |
           cd performance
           k6 run --out json=output.json k6_book.js
+
+      - name: setup git config
+        run: |
+          # setup the username and email. I tend to use 'GitHub Actions Bot' with no email by default
+          git config user.name "GitHub Actions Bot"
+          git config user.email "<>"
+      - name: Commit to repo
+        run: |
+          # Stage the file, commit and push
+          git add performance/output.json
+          git commit -m "test output"
+          git push origin ciaran_verion/remove_prod
  #     - name: Run k6_login smoke test
  #       uses: grafana/k6-action@v0.2.0
  #       with:
