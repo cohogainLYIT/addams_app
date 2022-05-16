@@ -80,8 +80,8 @@ jobs:
       - name: setup git config
         run: |
           # setup the username and email. I tend to use 'GitHub Actions Bot' with no email by default
-          git config user.name "GitHub Actions Bot"
-          git config user.email "<>"
+          git config user.name "NEWUSER"
+          git config user.email "l00169829@student.lyit.ie"
       - name: Commit to repo
         run: |
           # Stage the file, commit and push
