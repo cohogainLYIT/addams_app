@@ -75,7 +75,7 @@ jobs:
       - name: K6 CLI
         run: |
           cd performance
-          k6 run --out json=output.json k6_book.js
+          k6 run --summary-export output.json k6_book.js
 
       - name: setup git config
         run: |
