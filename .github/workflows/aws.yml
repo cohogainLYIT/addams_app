@@ -70,7 +70,7 @@ jobs:
       - name: install K6 CLI
         run:  |
           sudo apt-get update
-          snap install k6
+          sudo snap install k6
 
       - name: K6 CLI
         run: |
