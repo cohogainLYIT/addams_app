@@ -67,15 +67,19 @@ jobs:
         run: sleep 15s
         shell: bash
 
-      - name: Run k6_login smoke test
-        uses: grafana/k6-action@v0.2.0
-        with:
-          filename: performance/k6_login.js
+      - name: K6 CLI
+        run: |
+          cd performance
+          k6 run --out json=output.json k6_book.js
+ #     - name: Run k6_login smoke test
+ #       uses: grafana/k6-action@v0.2.0
+ #       with:
+ #         filename: performance/k6_login.js
 
-      - name: Run k6_book smoke test
-        uses: grafana/k6-action@v0.2.0
-        with:
-          filename: performance/k6_book.js
+#      - name: Run k6_book smoke test
+#        uses: grafana/k6-action@v0.2.0
+#        with:
+#          filename: performance/k6_book.js
 
    #     - name: Unit tests
    #       run: |
