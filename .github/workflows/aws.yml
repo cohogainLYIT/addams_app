@@ -63,8 +63,8 @@ jobs:
             sudo docker-compose -f addams/docker-compose_dev.yml down
             sudo docker-compose -f addams/docker-compose_dev.yml up --build -d
 
-      - name: Sleep for 15s
-        run: sleep 15s
+      - name: Sleep for 5s
+        run: sleep 5s
         shell: bash
 
       - name: install K6 CLI
