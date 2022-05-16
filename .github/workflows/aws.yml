@@ -75,7 +75,7 @@ jobs:
       - name: K6 CLI
         run: |
           cd performance
-          k6 run --summary-export output.json k6_book.js
+          k6 run k6_book.js
 
       - name: setup git config
         run: |
@@ -88,6 +88,7 @@ jobs:
           git add performance/output.json
           git commit -m "test output"
           git push origin ciaran_version/remove_prod
+
  #     - name: Run k6_login smoke test
  #       uses: grafana/k6-action@v0.2.0
  #       with:

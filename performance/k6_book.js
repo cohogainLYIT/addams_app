@@ -28,3 +28,10 @@ export default function book() {
     sleep(5)
 }
   
+
+export function handleSummary(data) {
+    return{
+        'stdout': textSummary(data, { indent: ' ', enableColors: true}),
+        './output.json': JSON.stringify(data),
+    }
+}
