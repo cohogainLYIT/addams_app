@@ -87,7 +87,7 @@ jobs:
           # Stage the file, commit and push
           git add performance/output.json
           git commit -m "test output"
-          git push origin ciaran_verion/remove_prod
+          git push origin ciaran_version/remove_prod
  #     - name: Run k6_login smoke test
  #       uses: grafana/k6-action@v0.2.0
  #       with:
