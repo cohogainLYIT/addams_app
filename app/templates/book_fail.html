@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Booking failed.</title>
+		<link rel="stylesheet" href="{{ url_for('static', filename='post_book.css') }}">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+	</head>
+	<body>
+        <div class="book_succ">
+            <h1> Sorry!</h1> 
+			<p>You have unsuccessfully booked a stay.</p>
+			<p>We do not have available rooms for your number of guests.</p>
+			<form action="{{ url_for('book') }}" method="post">
+				<input type="submit" value="Exit">
+			</form>
+        </div>
+	</body>
+</html>
+

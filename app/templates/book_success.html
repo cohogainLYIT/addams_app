@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Booking successful!</title>
+		<link rel="stylesheet" href="{{ url_for('static', filename='post_book.css') }}">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+	</head>
+	<body>
+        <div class="book_succ">
+            <h1>Congratulations {{name}}!</h1> 
+			<p>You have successfully booked a stay for {{num}} guests on {{date}}.</p>
+			<p>You will be staying in the beautiful {{property}}.</p>
+			<p class="requests?"> Special Requests: </p>				
+			<p class="requests" > {{nice_to_have}}</p>
+			<form action="{{ url_for('book') }}" method="post">
+				<input type="submit" value="Exit">
+			</form>
+        </div>
+	</body>
+</html>
+

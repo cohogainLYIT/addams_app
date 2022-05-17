@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>{% block title %}{% endblock %}</title>
+		<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+	</head>
+	<body class="loggedin">
+		<nav class="navtop">
+			<div>
+				<h1>Addams Family Admin</h1>
+                <a href="{{ url_for('home') }}"><em class="fas fa-home"></em>Home</a>
+				<a href="{{ url_for('profile') }}"><em class="fas fa-user-circle"></em>Profile</a>
+				<a href="{{ url_for('admin') }}"><em class="fa fa-book"></em>Bookings</a>
+				<a href="{{ url_for('logout') }}"><em class="fas fa-sign-out-alt"></em>Logout</a>
+			</div>
+		</nav>
+		<div class="content">
+			{% block content %}{% endblock %}
+		</div>
+	</body>
+</html>
