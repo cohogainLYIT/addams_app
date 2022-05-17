@@ -82,7 +82,7 @@ jobs:
           # setup the username and email. I tend to use 'GitHub Actions Bot' with no email by default
           git config user.name "NEWUSER"
           git config user.email "l00169829@student.lyit.ie"
-          
+
       - name: Commit to repo
         run: |
           # Stage the file, commit and push
@@ -93,7 +93,7 @@ jobs:
       - name: Store benchmark result
         uses: cohogainLYIT/github-action-benchmark@v1
         tool: 'k6'
-        output-file-path: performmance/output.json
+        output-file-path: performance/output.json
         github-token: ${{ secrets.TOKEN }}
         auto-push: true
         alert-threshold: '200%'
