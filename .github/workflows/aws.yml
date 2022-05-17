@@ -72,10 +72,15 @@ jobs:
           sudo apt-get update
           sudo snap install k6
 
-      - name: K6 CLI
+      - name: K6 book
         run: |
           cd performance
-          k6 run --summary-export output.json k6_book.js
+          k6 run --summary-export book_output.json k6_book.js
+
+      - name: K6 login
+        run: |
+          cd performance
+          k6 run --summary-export login_output.json k6_login.js
 
       - name: setup git config
         run: |
@@ -90,12 +95,12 @@ jobs:
           git commit -m "test output"
           git push origin ciaran_version/remove_prod
 
-      - name: Store benchmark result
+      - name: Store book benchmark result
         uses: cohogainLYIT/github-action-benchmark@v1
         with:
           name: K6 benchmark
-          tool: 'k6'
-          output-file-path: performance/output.json
+          tool: 'k6_book'
+          output-file-path: performance/book_output.json
           github-token: ${{ secrets.TOKEN }}
           auto-push: true
           alert-threshold: '200%'
@@ -103,21 +108,15 @@ jobs:
           fail-on-alert: true
           alert-comment-cc-users: '@ktrz'
 
- #     - name: Run k6_login smoke test
- #       uses: grafana/k6-action@v0.2.0
- #       with:
- #         filename: performance/k6_login.js
-
-#      - name: Run k6_book smoke test
-#        uses: grafana/k6-action@v0.2.0
-#        with:
-#          filename: performance/k6_book.js
-
-   #     - name: Unit tests
-   #       run: |
-   #         cd Unit_test
-   #         newman run Addams_Collection.postman_collection.json -e Addams_Dev.postman_environment.json
-    
-
-   
-    
+      - name: Store login benchmark result
+        uses: cohogainLYIT/github-action-benchmark@v1
+        with:
+          name: K6 benchmark
+          tool: 'k6_login'
+          output-file-path: performance/login_output.json
+          github-token: ${{ secrets.TOKEN }}
+          auto-push: true
+          alert-threshold: '200%'
+          comment-on-alert: true
+          fail-on-alert: true
+          alert-comment-cc-users: '@ktrz'
