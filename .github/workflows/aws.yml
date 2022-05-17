@@ -82,13 +82,25 @@ jobs:
           # setup the username and email. I tend to use 'GitHub Actions Bot' with no email by default
           git config user.name "NEWUSER"
           git config user.email "l00169829@student.lyit.ie"
+          
       - name: Commit to repo
         run: |
           # Stage the file, commit and push
           git add performance/output.json
           git commit -m "test output"
           git push origin ciaran_version/remove_prod
-          
+
+      - name: Store benchmark result
+        uses: cohogainLYIT/github-action-benchmark@v1
+        tool: 'k6'
+        output-file-path: performmance/output.json
+        github-token: ${{ secrets.TOKEN }}
+        auto-push: true
+        alert-threshold: '200%'
+        comment-on-alert: true
+        fail-on-alert: true
+        alert-comment-cc-users: '@ktrz'
+
  #     - name: Run k6_login smoke test
  #       uses: grafana/k6-action@v0.2.0
  #       with:
