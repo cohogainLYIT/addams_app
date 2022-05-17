@@ -1,7 +1,8 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1652818249147,
+  "lastUpdate": 1652821257067,
+  "repoUrl": "https://github.com/cohogainLYIT/addams_app",
   "entries": {
-    "K6 benchmark": [
+    "K6 Book benchmark": [
       {
         "commit": {
           "author": {
@@ -15,22 +16,20 @@ window.BENCHMARK_DATA = {
             "username": "cohogainLYIT"
           },
           "distinct": true,
-          "id": "4fb29916473bb081bb040e706a4d5a69200cae72",
-          "message": "remove output.json",
-          "timestamp": "2022-05-17T21:08:24+01:00",
-          "tree_id": "cb6d4aa312d567876743f70db2cb8ef0d4b729c1",
-          "url": "https://github.com/cohogainLYIT/addams_app/commit/4fb29916473bb081bb040e706a4d5a69200cae72"
+          "id": "1283e59189170c8cd043b875ae32d9ca40e6ace2",
+          "message": "added login k6 benchmark to workflow file",
+          "timestamp": "2022-05-17T21:46:14+01:00",
+          "tree_id": "5b0b15b203addcee82c82c7640a66c4ce321adcc",
+          "url": "https://github.com/cohogainLYIT/addams_app/commit/1283e59189170c8cd043b875ae32d9ca40e6ace2"
         },
-        "date": 1652818247867,
-        "tool": "k6",
-        "benches": [
-          {
-          "name": "k6 test",
-          "value": 80,
+        "date": 1652821255904,
+        "tool": "k6_book",
+        "benches": {
+          "name": "Book",
           "unit": "ms",
-          "range": "+/- 35",
+          "range": "0",
+          "extra": "0"
         }
-      ]
       }
     ]
   }
