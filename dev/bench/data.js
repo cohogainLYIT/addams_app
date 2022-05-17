@@ -24,12 +24,13 @@ window.BENCHMARK_DATA = {
         },
         "date": 1652821255904,
         "tool": "k6_book",
-        "benches": {
+        "benches": [{
           "name": "Book",
+          "value": 105.16,
           "unit": "ms",
           "range": "0",
           "extra": "0"
-        }
+        }]
       }
     ],
     "K6 Login benchmark": [
@@ -54,12 +55,13 @@ window.BENCHMARK_DATA = {
         },
         "date": 1652821258070,
         "tool": "k6_login",
-        "benches": {
+        "benches": [{
           "name": "Login",
+          "value": 140.94,
           "unit": "ms",
           "range": "0",
           "extra": "0"
-        }
+        }]
       }
     ]
   }
