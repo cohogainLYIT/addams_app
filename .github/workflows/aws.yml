@@ -92,14 +92,16 @@ jobs:
 
       - name: Store benchmark result
         uses: cohogainLYIT/github-action-benchmark@v1
-        tool: 'k6'
-        output-file-path: performance/output.json
-        github-token: ${{ secrets.TOKEN }}
-        auto-push: true
-        alert-threshold: '200%'
-        comment-on-alert: true
-        fail-on-alert: true
-        alert-comment-cc-users: '@ktrz'
+        with:
+          name: K6 benchmark
+          tool: 'k6'
+          output-file-path: performance/output.json
+          github-token: ${{ secrets.TOKEN }}
+          auto-push: true
+          alert-threshold: '200%'
+          comment-on-alert: true
+          fail-on-alert: true
+          alert-comment-cc-users: '@ktrz'
 
  #     - name: Run k6_login smoke test
  #       uses: grafana/k6-action@v0.2.0
