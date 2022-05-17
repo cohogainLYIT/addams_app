@@ -1,6 +1,5 @@
 window.BENCHMARK_DATA = {
   "lastUpdate": 1652818249147,
-  "repoUrl": "https://github.com/cohogainLYIT/addams_app",
   "entries": {
     "K6 benchmark": [
       {
@@ -24,12 +23,14 @@ window.BENCHMARK_DATA = {
         },
         "date": 1652818247867,
         "tool": "k6",
-        "benches": {
+        "benches": [
+          {
           "name": "k6 test",
+          "value": 80,
           "unit": "ms",
-          "range": "0",
-          "extra": "0"
+          "range": "+/- 35",
         }
+      ]
       }
     ]
   }
