@@ -64,6 +64,7 @@ jobs:
           output-file-path: performance/book_output.json
           github-token: ${{ secrets.TOKEN }}
           auto-push: true
+          benchmark-data-dir-path: docs
           alert-threshold: '200%'
           comment-on-alert: true
           fail-on-alert: true
@@ -77,6 +78,7 @@ jobs:
           output-file-path: performance/login_output.json
           github-token: ${{ secrets.TOKEN }}
           auto-push: true
+          benchmark-data-dir-path: docs
           alert-threshold: '200%'
           comment-on-alert: true
           fail-on-alert: true
