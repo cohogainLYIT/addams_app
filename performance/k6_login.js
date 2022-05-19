@@ -17,14 +17,11 @@ const PASSWORD = 'Fester';
 
 export default function login() {
     let response = http.get(`${BASE_URL}:5001/login/`)
-    
-    sleep(5)
+
   
     response = http.post(`${BASE_URL}:5001/login/`,
     {
         username: USERNAME,
         password: PASSWORD,
     })
-
-    sleep(5)
 }
