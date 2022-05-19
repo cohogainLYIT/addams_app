@@ -24,13 +24,13 @@ window.BENCHMARK_DATA = {
         },
         "date": 1652971682205,
         "tool": "k6_book",
-        "benches": {
+        "benches": [{
           "name": "Book",
           "value": 427.076172,
           "unit": "ms",
           "range": "0",
           "extra": "0"
-        }
+        }]
       },
       {
         "commit": {
@@ -53,13 +53,13 @@ window.BENCHMARK_DATA = {
         },
         "date": 1652972055246,
         "tool": "k6_book",
-        "benches": {
+        "benches": [{
           "name": "Book",
           "value": 500.904332,
           "unit": "ms",
           "range": "0",
           "extra": "0"
-        }
+        }]
       }
     ],
     "K6 Login benchmark": [
@@ -84,13 +84,13 @@ window.BENCHMARK_DATA = {
         },
         "date": 1652971684429,
         "tool": "k6_login",
-        "benches": {
+        "benches": [{
           "name": "Login",
           "value": 144.244369,
           "unit": "ms",
           "range": "0",
           "extra": "0"
-        }
+        }]
       },
       {
         "commit": {
@@ -113,13 +113,13 @@ window.BENCHMARK_DATA = {
         },
         "date": 1652972061990,
         "tool": "k6_login",
-        "benches": {
+        "benches": [{
           "name": "Login",
           "value": 110.635262,
           "unit": "ms",
           "range": "0",
           "extra": "0"
-        }
+        }]
       }
     ]
   }
