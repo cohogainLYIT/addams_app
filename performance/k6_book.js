@@ -14,7 +14,7 @@ const BASE_URL = 'http://ec2-34-250-3-15.eu-west-1.compute.amazonaws.com:5001/';
 const USERNAME = 'Gomez';
 const PASSWORD = 'Fester';
 
-export function book() {
+export default function book() {
     let response = http.get(`${BASE_URL}:5001/`)
     
     response = http.post(`${BASE_URL}:5001/`,
@@ -25,26 +25,10 @@ export function book() {
         nice_to_have: 'wine and chocolate',
     })
 }
-  
-export function login() {
-    let response = http.get(`${BASE_URL}:5001/login/`)
-  
-    response = http.post(`${BASE_URL}:5001/login/`,
-    {
-        username: USERNAME,
-        password: PASSWORD,
-    })
-
-}
 
 export function handleSummary(data) {
     return{
         'stdout': textSummary(data, { indent: ' ', enableColors: true}),
         './output.json': JSON.stringify(data),
     }
-}
-
-export default function testSuite() {
-    book();
-    login();
 }
