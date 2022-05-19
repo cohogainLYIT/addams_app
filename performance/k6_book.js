@@ -11,6 +11,8 @@ export const options = {
 };
 
 const BASE_URL = 'http://ec2-3-249-142-230.eu-west-1.compute.amazonaws.com:5001/';
+const USERNAME = 'Gomez';
+const PASSWORD = 'Fester';
   
 export function book() {
     let response = http.get(`${BASE_URL}:5001/`)
