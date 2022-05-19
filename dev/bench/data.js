@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1652981152841,
+  "lastUpdate": 1652981153782,
   "repoUrl": "https://github.com/cohogainLYIT/addams_app",
   "entries": {
     "K6 Book benchmark": [
@@ -216,6 +216,37 @@ window.BENCHMARK_DATA = {
           {
             "name": "Login",
             "value": 127.394407,
+            "unit": "ms",
+            "range": "0",
+            "extra": "0"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "l00169829@student.lyit.ie",
+            "name": "NEWUSER",
+            "username": "cohogainLYIT"
+          },
+          "committer": {
+            "email": "l00169829@student.lyit.ie",
+            "name": "NEWUSER",
+            "username": "cohogainLYIT"
+          },
+          "distinct": true,
+          "id": "550e6887da2de9a0c49454f41d241c926c1f7c5b",
+          "message": "removed sleep from k6_login test",
+          "timestamp": "2022-05-19T18:22:01+01:00",
+          "tree_id": "0ee141b314c8bf90ff653aaa38a98e07c8910404",
+          "url": "https://github.com/cohogainLYIT/addams_app/commit/550e6887da2de9a0c49454f41d241c926c1f7c5b"
+        },
+        "date": 1652981153476,
+        "tool": "k6_login",
+        "benches": [
+          {
+            "name": "Login",
+            "value": 78.887809,
             "unit": "ms",
             "range": "0",
             "extra": "0"
