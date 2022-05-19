@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1652822397020,
+  "lastUpdate": 1652968930420,
   "repoUrl": "https://github.com/cohogainLYIT/addams_app",
   "entries": {
     "K6 Book benchmark": [
@@ -24,13 +24,15 @@ window.BENCHMARK_DATA = {
         },
         "date": 1652821255904,
         "tool": "k6_book",
-        "benches": [{
-          "name": "Book",
-          "value": 105.16,
-          "unit": "ms",
-          "range": "0",
-          "extra": "0"
-        }]
+        "benches": [
+          {
+            "name": "Book",
+            "value": 105.16,
+            "unit": "ms",
+            "range": "0",
+            "extra": "0"
+          }
+        ]
       },
       {
         "commit": {
@@ -53,13 +55,44 @@ window.BENCHMARK_DATA = {
         },
         "date": 1652822395855,
         "tool": "k6_book",
-        "benches":[{
+        "benches": [
+          {
+            "name": "Book",
+            "value": 130.154449,
+            "unit": "ms",
+            "range": "0",
+            "extra": "0"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "l00169829@student.lyit.ie",
+            "name": "NEWUSER",
+            "username": "cohogainLYIT"
+          },
+          "committer": {
+            "email": "l00169829@student.lyit.ie",
+            "name": "NEWUSER",
+            "username": "cohogainLYIT"
+          },
+          "distinct": true,
+          "id": "9a979c1af6030a47819f2c2b2c55a2e8b10493fd",
+          "message": "changed DNS",
+          "timestamp": "2022-05-19T14:54:47+01:00",
+          "tree_id": "97b695830641051e42264f95a3a24994c84d4590",
+          "url": "https://github.com/cohogainLYIT/addams_app/commit/9a979c1af6030a47819f2c2b2c55a2e8b10493fd"
+        },
+        "date": 1652968929852,
+        "tool": "k6_book",
+        "benches": {
           "name": "Book",
-          "value": 130.154449,
+          "value": 460.425284,
           "unit": "ms",
           "range": "0",
           "extra": "0"
-        }]
+        }
       }
     ],
     "K6 Login benchmark": [
@@ -84,13 +117,15 @@ window.BENCHMARK_DATA = {
         },
         "date": 1652821258070,
         "tool": "k6_login",
-        "benches": [{
-          "name": "Login",
-          "value": 140.94,
-          "unit": "ms",
-          "range": "0",
-          "extra": "0"
-        }]
+        "benches": [
+          {
+            "name": "Login",
+            "value": 140.94,
+            "unit": "ms",
+            "range": "0",
+            "extra": "0"
+          }
+        ]
       },
       {
         "commit": {
@@ -113,13 +148,15 @@ window.BENCHMARK_DATA = {
         },
         "date": 1652822395855,
         "tool": "k6_login",
-        "benches":[{
-          "name": "Login",
-          "value": 130.154449,
-          "unit": "ms",
-          "range": "0",
-          "extra": "0"
-        }]
+        "benches": [
+          {
+            "name": "Login",
+            "value": 130.154449,
+            "unit": "ms",
+            "range": "0",
+            "extra": "0"
+          }
+        ]
       }
     ]
   }
