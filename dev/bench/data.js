@@ -86,17 +86,16 @@ window.BENCHMARK_DATA = {
         },
         "date": 1652979139858,
         "tool": "k6_book",
-        "benches": {
-          "benches": [
-            {
-              "name": "Book",
-              "value": 536.592285,
-              "unit": "ms",
-              "range": "0",
-              "extra": "0"
-            }
-          ]
-        }
+        "benches": [
+          {
+            "name": "Book",
+            "value": 536.592285,
+            "unit": "ms",
+            "range": "0",
+            "extra": "0"
+          }
+        ]
+      
       }
     ],
     "K6 Login benchmark": [
@@ -183,18 +182,16 @@ window.BENCHMARK_DATA = {
         },
         "date": 1652979141965,
         "tool": "k6_login",
-        "benches": {
-          "benches": [
-            {
-              "name": "Login",
-              "value": 127.394407,
-              "unit": "ms",
-              "range": "0",
-              "extra": "0"
-            }
-          ]
+        "benches": [
+          {
+            "name": "Login",
+            "value": 127.394407,
+            "unit": "ms",
+            "range": "0",
+            "extra": "0"
+          }
+        ]
         }
-      }
     ]
   }
 }
