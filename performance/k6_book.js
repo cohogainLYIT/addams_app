@@ -10,7 +10,7 @@ export const options = {
     },
 };
 
-const BASE_URL = 'http://ec2-34-244-7-129.eu-west-1.compute.amazonaws.com:5001/';
+const BASE_URL = 'http://ec2-34-246-175-101.eu-west-1.compute.amazonaws.com:5001/';
   
 export default function book() {
     let response = http.get(`${BASE_URL}:5001/`)
