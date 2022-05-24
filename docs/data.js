@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1652983695485,
+  "lastUpdate": 1653399430031,
   "repoUrl": "https://github.com/cohogainLYIT/addams_app",
   "entries": {
     "K6 Book benchmark": [
@@ -152,6 +152,37 @@ window.BENCHMARK_DATA = {
           {
             "name": "Book",
             "value": 393.798961,
+            "unit": "ms",
+            "range": "0",
+            "extra": "0"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "l00169829@student.lyit.ie",
+            "name": "NEWUSER",
+            "username": "cohogainLYIT"
+          },
+          "committer": {
+            "email": "l00169829@student.lyit.ie",
+            "name": "NEWUSER",
+            "username": "cohogainLYIT"
+          },
+          "distinct": true,
+          "id": "a11602a77fdc91cdb3af68895b5aaaa5dea12ebf",
+          "message": "changed base url to new DNS",
+          "timestamp": "2022-05-24T14:33:52+01:00",
+          "tree_id": "1075540a6fac029039617fa1a63cd90183b3d185",
+          "url": "https://github.com/cohogainLYIT/addams_app/commit/a11602a77fdc91cdb3af68895b5aaaa5dea12ebf"
+        },
+        "date": 1653399429545,
+        "tool": "k6_book",
+        "benches": [
+          {
+            "name": "Book",
+            "value": 519.287906,
             "unit": "ms",
             "range": "0",
             "extra": "0"
