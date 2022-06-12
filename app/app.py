@@ -161,7 +161,7 @@ def book():
 
 
     """
-    sleep(0.5)
+    sleep(1)
     # Output message if something goes wrong...
     msg = ''
         # Check if "username" and "password" POST requests exist (user submitted form)
