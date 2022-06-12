@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request, redirect, url_for, session
 from flask_mysqldb import MySQL
+from time import sleep
 import MySQLdb.cursors
 import re
 import sys
@@ -160,7 +161,7 @@ def book():
 
 
     """
-
+    sleep(0.5)
     # Output message if something goes wrong...
     msg = ''
         # Check if "username" and "password" POST requests exist (user submitted form)
@@ -213,6 +214,7 @@ def login():
             :return: index.html
 
     """
+    sleep(0.1)
     # Output message if something goes wrong...
     msg = ''
     # Check if "username" and "password" POST requests exist (user submitted form)
