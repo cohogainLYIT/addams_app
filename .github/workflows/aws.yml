@@ -65,10 +65,9 @@ jobs:
           github-token: ${{ secrets.TOKEN }}
           auto-push: true
           benchmark-data-dir-path: docs
-          alert-threshold: '200%'
+          alert-threshold: '150%'
           comment-on-alert: true
-          fail-on-alert: true
-          alert-comment-cc-users: '@ktrz'
+          fail-on-alert: false
 
       - name: Store Login benchmark 
         uses: cohogainLYIT/github-action-benchmark@v1
@@ -79,7 +78,6 @@ jobs:
           github-token: ${{ secrets.TOKEN }}
           auto-push: true
           benchmark-data-dir-path: docs
-          alert-threshold: '200%'
+          alert-threshold: '150%'
           comment-on-alert: true
-          fail-on-alert: true
-          alert-comment-cc-users: '@ktrz'
+          fail-on-alert: false
