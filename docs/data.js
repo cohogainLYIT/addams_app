@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1655043992057,
+  "lastUpdate": 1655046496801,
   "repoUrl": "https://github.com/cohogainLYIT/addams_app",
   "entries": {
     "K6 Book benchmark": [
@@ -307,6 +307,37 @@ window.BENCHMARK_DATA = {
           {
             "name": "Book",
             "value": 506.825593,
+            "unit": "ms",
+            "range": "0",
+            "extra": "0"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "l00169829@student.lyit.ie",
+            "name": "NEWUSER",
+            "username": "cohogainLYIT"
+          },
+          "committer": {
+            "email": "l00169829@student.lyit.ie",
+            "name": "NEWUSER",
+            "username": "cohogainLYIT"
+          },
+          "distinct": true,
+          "id": "51273a82bd21fff9ecb89e54e2775b5d02493085",
+          "message": "changed book delay to 1s",
+          "timestamp": "2022-06-12T18:03:24+03:00",
+          "tree_id": "971c2c4bba29bb530816bddbb290687d700075a6",
+          "url": "https://github.com/cohogainLYIT/addams_app/commit/51273a82bd21fff9ecb89e54e2775b5d02493085"
+        },
+        "date": 1655046496305,
+        "tool": "k6_book",
+        "benches": [
+          {
+            "name": "Book",
+            "value": 545.167764,
             "unit": "ms",
             "range": "0",
             "extra": "0"
