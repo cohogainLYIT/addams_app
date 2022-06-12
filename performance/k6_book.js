@@ -10,7 +10,7 @@ export const options = {
     },
 };
 
-const BASE_URL = 'http://ec2-54-228-79-77.eu-west-1.compute.amazonaws.com:5001/';
+const BASE_URL = 'http://ec2-52-51-21-157.eu-west-1.compute.amazonaws.com:5001/';
 const USERNAME = 'Gomez';
 const PASSWORD = 'Fester';
 
